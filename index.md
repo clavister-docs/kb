@@ -40,7 +40,7 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 
 # test
 
-{% for file_hash in site.post %}
+{% for file_hash in site.pages %}
 {% assign file = file_hash[1] %}
 {{ file.name }}
 {% endfor %}
