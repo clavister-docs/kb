@@ -1,2 +1,11 @@
 theme: jekyll-theme-dinky
 repository: clavister-docs/kb
+exclude:
+  - CNAME
+  - README.MD
+  - README.md
+  - "*.sh"
+  - "*.bat"
+  - "*.BAT"
+  - Gemfile
+  - Gemfile.lock
