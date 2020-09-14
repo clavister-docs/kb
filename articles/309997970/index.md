@@ -1,5 +1,6 @@
 ---
 confluence-id: '309997970'
+layout: article
 orig-title: What packets are counted in "Forwarded bps" and "Forwarded pps" statistics
   (and SNMP) counters?
 slug: '309997970'

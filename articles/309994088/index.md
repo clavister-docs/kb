@@ -1,5 +1,6 @@
 ---
 confluence-id: '309994088'
+layout: article
 orig-title: Does IPsecBeforeRules trigger before Access rules?
 slug: '309994088'
 tags: kb kbcore kbipsec kbrules kbaccess

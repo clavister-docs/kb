@@ -1,5 +1,6 @@
 ---
 confluence-id: '310004298'
+layout: article
 orig-title: How to set up AirPrint, AirPlay, Mopria, CUPS etc with mDNS,DNS-SD,Bonjour,Avahi,Zeroconf
   discovery over multicast in transparent mode
 slug: '310004298'

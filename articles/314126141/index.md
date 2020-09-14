@@ -1,5 +1,6 @@
 ---
 confluence-id: '314126141'
+layout: article
 orig-title: Behavior of multiple traffic selectors in IKE negotiations - differences
   in Fortigate vs Clavister,Juniper,Cisco
 slug: '314126141'

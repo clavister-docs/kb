@@ -1,5 +1,6 @@
 ---
 confluence-id: '317189514'
+layout: article
 orig-title: InControl command-line options
 slug: '317189514'
 tags: kb kbincontrol

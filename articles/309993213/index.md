@@ -1,5 +1,6 @@
 ---
 confluence-id: '309993213'
+layout: article
 orig-title: tcp_mss_above_log_level log events for MSS 8960 being higher than TCPMSSLogLevel
   7000
 slug: '309993213'

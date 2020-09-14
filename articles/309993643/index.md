@@ -1,5 +1,6 @@
 ---
 confluence-id: '309993643'
+layout: article
 orig-title: 'HA: disallowed_on_sync_iface log events with rule=HA_RestrictSyncIf for
   Reverse ARP, RARP, and IGMP'
 slug: '309993643'

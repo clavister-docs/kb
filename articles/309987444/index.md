@@ -1,5 +1,6 @@
 ---
 confluence-id: '309987444'
+layout: article
 orig-title: How to adjust RX and TX ring sizes (queue lengths) of Ethernet interfaces
 slug: '309987444'
 tags: kb kbcore kbhowto kbethernet kbpacketloss kbcpu

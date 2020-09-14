@@ -1,5 +1,6 @@
 ---
 confluence-id: '317180249'
+layout: article
 orig-title: Explicit Congestion Notification - ECN, ECE, CWE, NS, ECT, CE
 slug: '317180249'
 tags: kb kbtcp kbecn

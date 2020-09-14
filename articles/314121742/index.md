@@ -1,5 +1,6 @@
 ---
 confluence-id: '314121742'
+layout: article
 orig-title: 'Windows 10 IKEv2 IPsec error: "Main mode SA lifetime expired or peer
   sent a main mode delete"'
 slug: '314121742'

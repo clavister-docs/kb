@@ -1,5 +1,6 @@
 ---
 confluence-id: '314125465'
+layout: article
 orig-title: Why does WireShark say that SNMPv3 traps sent from cOS Core are "snmpV2-trap"?
 slug: '314125465'
 tags: kb kbsnmp kbcore kbwireshark

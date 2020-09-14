@@ -1,5 +1,6 @@
 ---
 confluence-id: '314127273'
+layout: article
 orig-title: Can blacklist timeouts (TTL,lifetime) for "Scanner Protection" or "Botnet
   Blocking" be changed or increased?
 slug: '314127273'
