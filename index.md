@@ -38,9 +38,9 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 
 
 
-# test
+# All pages test
 
-{% for file_hash in site.pages %}
-{% assign file = file_hash[1] %}
-{{ file.name }}
+{% assign articles = site.pages | where: "layout", "article" %}
+{% for page in articles %}
+* [{{page.title}}]({{page.url}})  <small>{{page.tags}}</small>
 {% endfor %}
