@@ -5,7 +5,7 @@ last_modified_at: '2020-09-07T17:01:55.000+02:00'
 layout: article
 orig-title: InControl command-line options
 orig-title-slugified: incontrol-command-line-options
-permalink: /kb/317189514/#!incontrol-command-line-options
+permalink: /317189514/
 published: 'true'
 slug: '317189514'
 tags: kb kbincontrol

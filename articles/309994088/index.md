@@ -5,7 +5,7 @@ last_modified_at: '2020-09-08T01:21:01.000+02:00'
 layout: article
 orig-title: Does IPsecBeforeRules trigger before Access rules?
 orig-title-slugified: does-ipsecbeforerules-trigger-before-access-rules-
-permalink: /kb/309994088/#!does-ipsecbeforerules-trigger-before-access-rules-
+permalink: /309994088/
 published: 'true'
 slug: '309994088'
 tags: kb kbcore kbipsec kbrules kbaccess

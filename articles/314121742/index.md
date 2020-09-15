@@ -6,7 +6,7 @@ layout: article
 orig-title: 'Windows 10 IKEv2 IPsec error: "Main mode SA lifetime expired or peer
   sent a main mode delete"'
 orig-title-slugified: windows-10-ikev2-ipsec-error-main-mode-sa-lifetime-expired-or-peer-sent-a-main-mode-delete-
-permalink: /kb/314121742/#!windows-10-ikev2-ipsec-error-main-mode-sa-lifetime-expired-or-peer-sent-a-main-mode-delete-
+permalink: /314121742/
 published: 'true'
 slug: '314121742'
 tags: kb kbcore kbvpn kbipsec kbikev2 kbwindows kbdh

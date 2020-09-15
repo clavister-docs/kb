@@ -6,7 +6,7 @@ layout: article
 orig-title: Best ways of looking up the MAC Vendor (OUI) for an Ethernet hardware
   address
 orig-title-slugified: best-ways-of-looking-up-the-mac-vendor-oui-for-an-ethernet-hardware-address
-permalink: /kb/309987726/#!best-ways-of-looking-up-the-mac-vendor-oui-for-an-ethernet-hardware-address
+permalink: /309987726/
 published: 'true'
 slug: '309987726'
 tags: kb kbethernet kboui

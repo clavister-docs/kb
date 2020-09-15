@@ -6,7 +6,7 @@ layout: article
 orig-title: 'HA: disallowed_on_sync_iface log events with rule=HA_RestrictSyncIf for
   Reverse ARP, RARP, and IGMP'
 orig-title-slugified: ha-disallowed-on-sync-iface-log-events-with-rule-ha-restrictsyncif-for-reverse-arp-rarp-and-igmp
-permalink: /kb/309993643/#!ha-disallowed-on-sync-iface-log-events-with-rule-ha-restrictsyncif-for-reverse-arp-rarp-and-igmp
+permalink: /309993643/
 published: 'true'
 slug: '309993643'
 tags: kb kbvmware kblog kbha kbrarp kbarp kbcore

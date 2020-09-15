@@ -6,7 +6,7 @@ layout: article
 orig-title: How to set up AirPrint, AirPlay, Mopria, CUPS etc with mDNS,DNS-SD,Bonjour,Avahi,Zeroconf
   discovery over multicast in transparent mode
 orig-title-slugified: how-to-set-up-airprint-airplay-mopria-cups-etc-with-mdns-dns-sd-bonjour-avahi-zeroconf-discovery-over-multicast-in-transparent-mode
-permalink: /kb/310004298/#!how-to-set-up-airprint-airplay-mopria-cups-etc-with-mdns-dns-sd-bonjour-avahi-zeroconf-discovery-over-multicast-in-transparent-mode
+permalink: /310004298/
 published: 'true'
 slug: '310004298'
 tags: kb kbcore kbhowto kbmdns kbmulticast kbtransparentmode kbairprint kbigmp

@@ -5,7 +5,7 @@ last_modified_at: '2020-09-08T01:22:26.000+02:00'
 layout: article
 orig-title: Explicit Congestion Notification - ECN, ECE, CWE, NS, ECT, CE
 orig-title-slugified: explicit-congestion-notification---ecn-ece-cwe-ns-ect-ce
-permalink: /kb/317180249/#!explicit-congestion-notification---ecn-ece-cwe-ns-ect-ce
+permalink: /317180249/
 published: 'true'
 slug: '317180249'
 tags: kb kbtcp kbecn

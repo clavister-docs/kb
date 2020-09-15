@@ -6,7 +6,7 @@ layout: article
 orig-title: tcp_mss_above_log_level log events for MSS 8960 being higher than TCPMSSLogLevel
   7000
 orig-title-slugified: tcp-mss-above-log-level-log-events-for-mss-8960-being-higher-than-tcpmssloglevel-7000
-permalink: /kb/309993213/#!tcp-mss-above-log-level-log-events-for-mss-8960-being-higher-than-tcpmssloglevel-7000
+permalink: /309993213/
 published: 'true'
 slug: '309993213'
 tags: kb kblog kbtcp kbmtu kbcore kbmss

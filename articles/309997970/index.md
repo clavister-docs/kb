@@ -6,7 +6,7 @@ layout: article
 orig-title: What packets are counted in "Forwarded bps" and "Forwarded pps" statistics
   (and SNMP) counters?
 orig-title-slugified: what-packets-are-counted-in-forwarded-bps-and-forwarded-pps-statistics-and-snmp-counters-
-permalink: /kb/309997970/#!what-packets-are-counted-in-forwarded-bps-and-forwarded-pps-statistics-and-snmp-counters-
+permalink: /309997970/
 published: 'true'
 slug: '309997970'
 tags: kb kbcore kbstatistics kbsnmp

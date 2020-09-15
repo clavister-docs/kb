@@ -5,7 +5,7 @@ last_modified_at: '2020-09-08T01:19:35.000+02:00'
 layout: article
 orig-title: Why does WireShark say that SNMPv3 traps sent from cOS Core are "snmpV2-trap"?
 orig-title-slugified: why-does-wireshark-say-that-snmpv3-traps-sent-from-cos-core-are-snmpv2-trap-
-permalink: /kb/314125465/#!why-does-wireshark-say-that-snmpv3-traps-sent-from-cos-core-are-snmpv2-trap-
+permalink: /314125465/
 published: 'true'
 slug: '314125465'
 tags: kb kbsnmp kbcore kbwireshark

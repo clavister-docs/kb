@@ -6,7 +6,7 @@ layout: article
 orig-title: Can blacklist timeouts (TTL,lifetime) for "Scanner Protection" or "Botnet
   Blocking" be changed or increased?
 orig-title-slugified: can-blacklist-timeouts-ttl-lifetime-for-scanner-protection-or-botnet-blocking-be-changed-or-increased-
-permalink: /kb/314127273/#!can-blacklist-timeouts-ttl-lifetime-for-scanner-protection-or-botnet-blocking-be-changed-or-increased-
+permalink: /314127273/
 published: 'true'
 slug: '314127273'
 tags: kb kbcore kbipreputation kbblacklist kbthreatprevention
