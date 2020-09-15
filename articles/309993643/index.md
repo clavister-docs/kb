@@ -1,8 +1,13 @@
 ---
 confluence-id: '309993643'
+date: '2020-09-08T01:20:16.000+02:00'
+last_modified_at: '2020-09-08T01:20:16.000+02:00'
 layout: article
 orig-title: 'HA: disallowed_on_sync_iface log events with rule=HA_RestrictSyncIf for
   Reverse ARP, RARP, and IGMP'
+orig-title-slugified: ha-disallowed-on-sync-iface-log-events-with-rule-ha-restrictsyncif-for-reverse-arp-rarp-and-igmp
+permalink: /kb/309993643/#!ha-disallowed-on-sync-iface-log-events-with-rule-ha-restrictsyncif-for-reverse-arp-rarp-and-igmp
+published: 'true'
 slug: '309993643'
 tags: kb kbvmware kblog kbha kbrarp kbarp kbcore
 title: 'HA: disallowed_on_sync_iface log events with rule=HA_RestrictSyncIf for Reverse

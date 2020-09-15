@@ -1,8 +1,13 @@
 ---
 confluence-id: '314126141'
+date: '2020-09-08T00:29:17.000+02:00'
+last_modified_at: '2020-09-08T00:29:17.000+02:00'
 layout: article
 orig-title: Behavior of multiple traffic selectors in IKE negotiations - differences
   in Fortigate vs Clavister,Juniper,Cisco
+orig-title-slugified: behavior-of-multiple-traffic-selectors-in-ike-negotiations---differences-in-fortigate-vs-clavister-juniper-cisco
+permalink: /kb/314126141/#!behavior-of-multiple-traffic-selectors-in-ike-negotiations---differences-in-fortigate-vs-clavister-juniper-cisco
+published: 'true'
 slug: '314126141'
 tags: kb kbcore kbipsec kbikev2 kbike kbfortigate
 title: Behavior of multiple traffic selectors in IKE negotiations - differences in

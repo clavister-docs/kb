@@ -1,6 +1,18 @@
 theme: jekyll-theme-dinky
-# the "repository:" line makes octocat not barf when the repo is checked out from windows git but we're running jekyll under linux (in a VM using a shared folder) - if it's not present, it'll try to use the local repo, which will be the wrong format
+
+# the "repository:" line makes octocat (jekyll component) not barf when the repo is checked out from windows git but we're running jekyll under linux (in a VM using a shared folder) - if it's not present, it'll try to use the local repo, which will be the wrong format
 repository: clavister-docs/kb
+
+# what plugins can be used with GitHub Pages? 
+# - cannot be disabled: https://docs.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll#plugins
+# - can be enabled: https://pages.github.com/versions/
+# ... or just do "bundle" in the "kb" folder if you're installed the github-pages gem
+plugins:
+  - jekyll-sitemap
+# "url:" is needed by jekyll-sitemap: see https://github.com/jekyll/jekyll-sitemap
+
+url: "https://clavister-docs.github.io"
+
 exclude:
   - CNAME
   - README.MD

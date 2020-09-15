@@ -1,8 +1,13 @@
 ---
 confluence-id: '309993213'
+date: '2020-09-08T01:20:03.000+02:00'
+last_modified_at: '2020-09-08T01:20:03.000+02:00'
 layout: article
 orig-title: tcp_mss_above_log_level log events for MSS 8960 being higher than TCPMSSLogLevel
   7000
+orig-title-slugified: tcp-mss-above-log-level-log-events-for-mss-8960-being-higher-than-tcpmssloglevel-7000
+permalink: /kb/309993213/#!tcp-mss-above-log-level-log-events-for-mss-8960-being-higher-than-tcpmssloglevel-7000
+published: 'true'
 slug: '309993213'
 tags: kb kblog kbtcp kbmtu kbcore kbmss
 title: tcp_mss_above_log_level log events for MSS 8960 being higher than TCPMSSLogLevel

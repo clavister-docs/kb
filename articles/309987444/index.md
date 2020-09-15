@@ -1,7 +1,12 @@
 ---
 confluence-id: '309987444'
+date: '2020-09-07T00:29:20.000+02:00'
+last_modified_at: '2020-09-07T00:29:20.000+02:00'
 layout: article
 orig-title: How to adjust RX and TX ring sizes (queue lengths) of Ethernet interfaces
+orig-title-slugified: how-to-adjust-rx-and-tx-ring-sizes-queue-lengths-of-ethernet-interfaces
+permalink: /kb/309987444/#!how-to-adjust-rx-and-tx-ring-sizes-queue-lengths-of-ethernet-interfaces
+published: 'true'
 slug: '309987444'
 tags: kb kbcore kbhowto kbethernet kbpacketloss kbcpu
 title: How to adjust RX and TX ring sizes (queue lengths) of Ethernet interfaces

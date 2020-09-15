@@ -1,8 +1,13 @@
 ---
 confluence-id: '309987726'
+date: '2020-09-11T14:52:35.000+02:00'
+last_modified_at: '2020-09-11T14:52:35.000+02:00'
 layout: article
 orig-title: Best ways of looking up the MAC Vendor (OUI) for an Ethernet hardware
   address
+orig-title-slugified: best-ways-of-looking-up-the-mac-vendor-oui-for-an-ethernet-hardware-address
+permalink: /kb/309987726/#!best-ways-of-looking-up-the-mac-vendor-oui-for-an-ethernet-hardware-address
+published: 'true'
 slug: '309987726'
 tags: kb kbethernet kboui
 title: Best ways of looking up the MAC Vendor (OUI) for an Ethernet hardware address
