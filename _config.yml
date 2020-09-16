@@ -1,4 +1,4 @@
-theme: jekyll-theme-dinky
+theme: jekyll-theme-cayman
 
 # the "repository:" line makes octocat (jekyll component) not barf when the repo is checked out from windows git but we're running jekyll under linux (in a VM using a shared folder) - if it's not present, it'll try to use the local repo, which will be the wrong format
 repository: clavister-docs/kb
