@@ -49,7 +49,7 @@ version: 6
 <div class="columnLayout single" data-layout="single">
 <div class="cell normal" data-type="normal">
 <div class="innerCell">
-<p><img class="confluence-embedded-image" height="170" src="/download/attachments/309993213/image2019-9-6_23-26-26.png?version=1&amp;modificationDate=1567805341000&amp;api=v2" data-image-src="/download/attachments/309993213/image2019-9-6_23-26-26.png?version=1&amp;modificationDate=1567805341000&amp;api=v2" data-unresolved-comment-count="0" data-linked-resource-id="309993212" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2019-9-6_23-26-26.png" data-base-url="http://wiki.clavister.com" data-linked-resource-content-type="image/png" data-linked-resource-container-id="309993213" data-linked-resource-container-version="6" title="Knowledge Base &gt; tcp_mss_above_log_level log events for MSS 8960 being higher than TCPMSSLogLevel 7000 &gt; image2019-9-6_23-26-26.png" data-location="Knowledge Base &gt; tcp_mss_above_log_level log events for MSS 8960 being higher than TCPMSSLogLevel 7000 &gt; image2019-9-6_23-26-26.png" data-image-height="170" data-image-width="431"></p>
+<p><img src="image2019-9-6_23-26-26.png"></p>
 <p>Log events like the above are becoming a common occurence as more and more servers become connected to jumbogram networks - even though the Internet at large does not support larger frames than standard Ethernet.</p>
 <h1>Changing the TCPMSSLogLevel</h1>
 <p>To suppress the log events, simply set the "TCPMSSLogLevel" setting to e.g. 9000. Or 8960 if you like.</p>
