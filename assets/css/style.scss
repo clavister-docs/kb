@@ -1,0 +1,78 @@
+---
+---
+
+// apply Clavister branding 
+//
+
+// headers
+$header-bg-color: #598BAC;
+$header-bg-color-secondary: #1F3342;
+
+// text
+$section-headings-color: #215D83;
+$body-text-color: #525252;
+$body-link-color: #598BAC;
+
+@import "{{ site.theme }}";
+
+.page-header {
+    background: $header-bg-color-secondary url(/assets/img/header-bg.jpg) no-repeat;
+    background-size: cover;
+    box-shadow: 0 1px 5px 3px #ccc;
+
+    @include large {
+        padding: 1rem 1rem;
+    }
+    
+    @include medium {
+        padding: 1rem 4rem;
+    }
+    
+    @include small {
+        background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
+        padding: 1rem 1rem;
+    }
+
+    > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include large {
+            max-width: 64rem;
+            padding: 1rem 6rem;
+            margin: 0 auto;
+        }
+        
+          @include medium {
+            padding: 1rem 0rem;
+        }
+        
+          @include small {
+            padding: 0;
+        }
+    }
+
+    a.site-brand {
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        > img {
+            vertical-align: bottom;
+        }
+
+        > h2 {
+            display: inline;
+            margin: 0 0 0 10px;
+            color: #fff;
+            font-weight: 400;
+            font-size: 1.3rem;
+        }
+    }
+}
+
+.main-content {
+    font-size: 1rem;
+}

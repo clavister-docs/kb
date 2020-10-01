@@ -9,14 +9,16 @@ repository: clavister-docs/kb
 # ... or just do "bundle" in the "kb" folder if you're installed the github-pages gem
 plugins:
   - jekyll-sitemap
-# "url:" is needed by jekyll-sitemap: see https://github.com/jekyll/jekyll-sitemap
   - jekyll-redirect-from
 
-url: "https://clavister-docs.github.io"
-
+url: "https://clavister-docs.github.io" # "url:" is needed by jekyll-sitemap: see https://github.com/jekyll/jekyll-sitemap
 
 redirect_from:
   json: false
+
+title: "Clavister Docs"
+description: "Knowledge Base"
+
 exclude:
   - CNAME
   - README.MD
