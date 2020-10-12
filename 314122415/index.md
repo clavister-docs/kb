@@ -11,9 +11,7 @@ orig-title-slugified: windows-10-ikev2-only-proposes-diffie-hellman-group-2-1024
 permalink: /314122415/windows-10-ikev2-only-proposes-diffie-hellman-group-2-1024-bit---how-do-i-configure-it-to-use-group-14-2048-bit-
 properties:
 - - Up to date for
-  - Windows 10.0.18362 (2019)
-- - Not valid for
-  - ''
+  - - Windows 10.0.18362 (2019)
 - - Status
   - - OK
 published: 'true'

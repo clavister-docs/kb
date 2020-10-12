@@ -11,7 +11,7 @@ orig-title-slugified: does-ipsecbeforerules-trigger-before-access-rules-
 permalink: /309994088/does-ipsecbeforerules-trigger-before-access-rules-
 properties:
 - - Up to date for
-  - Core 12.00.20
+  - - Core 12.00.20
 - - Status
   - - OK
 published: 'true'

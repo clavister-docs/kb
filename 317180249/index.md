@@ -12,7 +12,7 @@ orig-title-slugified: explicit-congestion-notification---ecn-ece-cwe-ns-ect-ce
 permalink: /317180249/explicit-congestion-notification---ecn-ece-cwe-ns-ect-ce
 properties:
 - - Up to date for
-  - Core 12.00.24, 13.00.06
+  - - Core 12.00.24, 13.00.06
 - - Status
   - - OK
 published: 'true'

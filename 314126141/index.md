@@ -15,11 +15,8 @@ orig-title-slugified: behavior-of-multiple-traffic-selectors-in-ike-negotiations
 permalink: /314126141/behavior-of-multiple-traffic-selectors-in-ike-negotiations---differences-in-fortigate-vs-clavister-juniper-cisco
 properties:
 - - Up to date for
-  - Core 13.00.00Fortigate N.NN
-- - Supported since
-  - ''
-- - Not valid for
-  - ''
+  - - Core 13.00.00
+    - Fortigate N.NN
 - - Status
   - - OK
 published: 'true'

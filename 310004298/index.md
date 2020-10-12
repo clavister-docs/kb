@@ -13,11 +13,12 @@ orig-title-slugified: how-to-set-up-airprint-airplay-mopria-cups-etc-with-mdns-d
 permalink: /310004298/how-to-set-up-airprint-airplay-mopria-cups-etc-with-mdns-dns-sd-bonjour-avahi-zeroconf-discovery-over-multicast-in-transparent-mode
 properties:
 - - Up to date for
-  - Core 12.00.21Core 13.00.00Mopria Print Service for Android 2.10.6CUPS (2019)
+  - - Core 12.00.21
+    - Core 13.00.00
+    - Mopria Print Service for Android 2.10.6
+    - CUPS (2019)
 - - Supported since
-  - Core 8.70.xx
-- - Not valid for
-  - ''
+  - - Core 8.70.xx
 - - Status
   - - OK
 published: 'true'

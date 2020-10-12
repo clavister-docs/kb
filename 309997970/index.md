@@ -10,7 +10,7 @@ orig-title-slugified: what-packets-are-counted-in-forwarded-bps-and-forwarded-pp
 permalink: /309997970/what-packets-are-counted-in-forwarded-bps-and-forwarded-pps-statistics-and-snmp-counters-
 properties:
 - - Up to date for
-  - Core 12.00.20
+  - - Core 12.00.20
 - - Status
   - - OK
 published: 'true'

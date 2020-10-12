@@ -11,7 +11,7 @@ orig-title-slugified: how-to-adjust-rx-and-tx-ring-sizes-queue-lengths-of-ethern
 permalink: /309987444/how-to-adjust-rx-and-tx-ring-sizes-queue-lengths-of-ethernet-interfaces
 properties:
 - - Up to date for
-  - Core 12.00.19
+  - - Core 12.00.19
 - - Status
   - - DRAFT
     - OK

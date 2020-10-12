@@ -13,9 +13,9 @@ orig-title-slugified: can-blacklist-timeouts-ttl-lifetime-for-scanner-protection
 permalink: /314127273/can-blacklist-timeouts-ttl-lifetime-for-scanner-protection-or-botnet-blocking-be-changed-or-increased-
 properties:
 - - Up to date for
-  - Core 12.00.22, 13.00.01
+  - - Core 12.00.22, 13.00.01
 - - Supported since
-  - Core 12.00.00
+  - - Core 12.00.00
 - - Status
   - - OK
 published: 'true'

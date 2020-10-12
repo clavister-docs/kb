@@ -12,7 +12,7 @@ orig-title-slugified: tcp-mss-above-log-level-log-events-for-mss-8960-being-high
 permalink: /309993213/tcp-mss-above-log-level-log-events-for-mss-8960-being-higher-than-tcpmssloglevel-7000
 properties:
 - - Up to date for
-  - Core 12.00.20
+  - - Core 12.00.20
 - - Status
   - - OK
 published: 'true'

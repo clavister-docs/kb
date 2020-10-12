@@ -10,7 +10,9 @@ orig-title-slugified: why-does-wireshark-say-that-snmpv3-traps-sent-from-cos-cor
 permalink: /314125465/why-does-wireshark-say-that-snmpv3-traps-sent-from-cos-core-are-snmpv2-trap-
 properties:
 - - Up to date for
-  - Core 12.00.22Core 13.00.01WireShark 2.6.10
+  - - Core 12.00.22
+    - Core 13.00.01
+    - WireShark 2.6.10
 - - Status
   - - OK
 published: 'true'

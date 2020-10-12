@@ -10,7 +10,7 @@ orig-title-slugified: incontrol-command-line-options
 permalink: /317189514/incontrol-command-line-options
 properties:
 - - Up to date for
-  - InControl 1.40.06
+  - - InControl 1.40.06
 - - Status
   - - DRAFT
 published: 'true'

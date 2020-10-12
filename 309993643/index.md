@@ -14,7 +14,7 @@ orig-title-slugified: ha-disallowed-on-sync-iface-log-events-with-rule-ha-restri
 permalink: /309993643/ha-disallowed-on-sync-iface-log-events-with-rule-ha-restrictsyncif-for-reverse-arp-rarp-and-igmp
 properties:
 - - Up to date for
-  - Core 12.00.20
+  - - Core 12.00.20
 - - Status
   - - OK
 published: 'true'

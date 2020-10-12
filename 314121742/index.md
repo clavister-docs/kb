@@ -11,9 +11,8 @@ orig-title-slugified: windows-10-ikev2-ipsec-error-main-mode-sa-lifetime-expired
 permalink: /314121742/windows-10-ikev2-ipsec-error-main-mode-sa-lifetime-expired-or-peer-sent-a-main-mode-delete-
 properties:
 - - Up to date for
-  - Core 12.00.21Windows 10.0.18362 (2019)
-- - Not valid for
-  - ''
+  - - Core 12.00.21
+    - Windows 10.0.18362 (2019)
 - - Status
   - - OK
 published: 'true'
