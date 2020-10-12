@@ -1,0 +1,7 @@
+{% if include.articles and include.articles.size > 0 %}
+{% for article in include.articles %}
+* [{{article.title}}]({{article.url}})  <small>{{article.tags}}</small>
+{% endfor %}
+{% else %}
+No related articles found.
+{% endif %}
