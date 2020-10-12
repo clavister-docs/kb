@@ -7,7 +7,7 @@ layout: default
     <div style="flex: 1;">
         {{page.excerpt}}
         {% if page.toc %}
-            <p>{{ content | toc_only }}</p>
+            <p>{% include toc.html html=content %}</p>
         {% endif %}    
     </div>
     {% if page.properties and page.properties.size > 0 %}
