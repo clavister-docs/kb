@@ -106,6 +106,14 @@ $status-colors: (
       }
 }
 
+.panel {
+    position: relative;
+    float: right;
+    width: 350px;
+    background-color: #f5f5f5;
+    padding: 10px;
+}
+
 .badge {
     display: inline-block;
     padding: .25em .4em;
