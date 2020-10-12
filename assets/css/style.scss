@@ -1,8 +1,12 @@
 ---
 ---
 
-// apply Clavister branding 
+// apply Clavister branding and customization
 //
+
+// Breakpoints
+$large-breakpoint: 75rem;
+$medium-breakpoint: 48rem;
 
 // headers
 $header-bg-color: #598BAC;
@@ -12,6 +16,27 @@ $header-bg-color-secondary: #1F3342;
 $section-headings-color: #215D83;
 $body-text-color: #525252;
 $body-link-color: #598BAC;
+
+$status-colors: (
+    "draft":        #ff991f,
+    "ok":           #00875a,
+    "old":          #42526e,
+);
+
+// Color contrast
+@function color-yiq($color, $dark: #212529, $light: #fff) {
+    $r: red($color);
+    $g: green($color);
+    $b: blue($color);
+  
+    $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+  
+    @if ($yiq >= 150) {
+      @return $dark;
+    } @else {
+      @return $light;
+    }
+}
 
 @import "{{ site.theme }}";
 
@@ -39,7 +64,7 @@ $body-link-color: #598BAC;
         justify-content: space-between;
 
         @include large {
-            max-width: 64rem;
+            max-width: $large-breakpoint;
             padding: 1rem 6rem;
             margin: 0 auto;
         }
@@ -74,5 +99,42 @@ $body-link-color: #598BAC;
 }
 
 .main-content {
-    font-size: 1rem;
+    font-size: 1rem !important;
+
+    @include large {
+        max-width: $large-breakpoint;
+      }
+}
+
+.badge {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  
+    // Empty badges collapse automatically
+    &:empty {
+      display: none;
+    }
+
+    min-width: 70px;
+}
+
+@each $status, $color in $status-colors {
+    .badge-#{$status} {
+        color: color-yiq($color);
+        background-color: $color;
+    
+        &:focus,
+        &.focus {
+        outline: 0;
+        box-shadow: 0 0 0 .2rem rgba($color, .5);
+        }
+    }
 }
