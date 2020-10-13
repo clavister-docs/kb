@@ -3,4 +3,33 @@ layout: default
 ---
 <h1>{{page.title}}</h1>
 
-{{content}}
+<div style="display: flex;justify-content: space-between;">
+    <div style="flex: 1;">
+        {{page.excerpt}}
+        {% if page.toc %}
+            <p>{{ content | toc_only }}</p>
+        {% endif %}    
+    </div>
+    {% if page.properties and page.properties.size > 0 %}
+    <div style="margin-left: 20px;">
+        <table>            
+            {% for property in page.properties %}
+                <tr>
+                    <td>{{ property[0] }}</td>
+                    <td>
+                        {% if property[0] == "Status" %}
+                            {% for status in property[1] %}
+                                <span class="badge badge-{{ status | downcase }}">{{ status }}</span>
+                            {% endfor %}
+                        {% else %}
+                            {{ property[1] }}
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    {% endif %}
+</div>
+
+{{content}} 
