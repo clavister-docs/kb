@@ -13,17 +13,15 @@ orig-title-slugified: can-blacklist-timeouts-ttl-lifetime-for-scanner-protection
 permalink: /314127273/can-blacklist-timeouts-ttl-lifetime-for-scanner-protection-or-botnet-blocking-be-changed-or-increased-
 properties:
 - - Up to date for
-  - Core 12.00.22, 13.00.01
+  - - Core 12.00.22, 13.00.01
 - - Supported since
-  - Core 12.00.00
+  - - Core 12.00.00
 - - Status
   - - OK
 published: 'true'
 redirect_from:
 - /314127273/
 slug: '314127273'
-status:
-- OK
 tags: kb kbcore kbipreputation kbblacklist kbthreatprevention
 title: Can blacklist timeouts (TTL,lifetime) for "Scanner Protection" or "Botnet Blocking"
   be changed or increased?
@@ -42,14 +40,12 @@ And, yes, the blacklisting lifetimes _can_ be configured for these.
 
 
 # Related articles
-
-        {% assign list = "" | split:"" %}
-        {% assign articles = site.pages | where: "layout", "article" %}
-        {% for article in articles %}
-        {% if item.tags contains "kbthreatprevention" or item.tags contains "kbblacklist" %}
-            {% assign list = list | push: article %}
-            
-        {% endif %}
-        {% endfor %}
-        {% assign list = list | uniq %}
-        {% include listrelated.html articles = list %}
+{% assign list = "" | split:"" %}
+{% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
+{% for article in articles %}
+{% if article.tags contains "kbthreatprevention" or article.tags contains "kbblacklist" %}
+{% assign list = list | push: article %}
+{% endif %}
+{% endfor %}
+{% assign list = list | uniq %}
+{% include listrelated.html articles = list %}

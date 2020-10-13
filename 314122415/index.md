@@ -11,17 +11,13 @@ orig-title-slugified: windows-10-ikev2-only-proposes-diffie-hellman-group-2-1024
 permalink: /314122415/windows-10-ikev2-only-proposes-diffie-hellman-group-2-1024-bit---how-do-i-configure-it-to-use-group-14-2048-bit-
 properties:
 - - Up to date for
-  - Windows 10.0.18362 (2019)
-- - Not valid for
-  - ''
+  - - Windows 10.0.18362 (2019)
 - - Status
   - - OK
 published: 'true'
 redirect_from:
 - /314122415/
 slug: '314122415'
-status:
-- OK
 tags: kb kbvpn kbipsec kbikev2 kbwindows kbhowto kbdh
 title: Windows 10 IKEv2 only proposes Diffie-Hellman group 2, 1024 bit - how do I
   configure it to use group 14, 2048 bit?
@@ -48,14 +44,12 @@ It is possibly to registry-patch Windows to use stronger crypto See e.g. <a href
 
 
 # Related articles
-
-        {% assign list = "" | split:"" %}
-        {% assign articles = site.pages | where: "layout", "article" %}
-        {% for article in articles %}
-        {% if item.tags contains "kbikev2" or item.tags contains "kbdh" %}
-            {% assign list = list | push: article %}
-            
-        {% endif %}
-        {% endfor %}
-        {% assign list = list | uniq %}
-        {% include listrelated.html articles = list %}
+{% assign list = "" | split:"" %}
+{% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
+{% for article in articles %}
+{% if article.tags contains "kbikev2" or article.tags contains "kbdh" %}
+{% assign list = list | push: article %}
+{% endif %}
+{% endfor %}
+{% assign list = list | uniq %}
+{% include listrelated.html articles = list %}

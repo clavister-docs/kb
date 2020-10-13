@@ -15,19 +15,14 @@ orig-title-slugified: behavior-of-multiple-traffic-selectors-in-ike-negotiations
 permalink: /314126141/behavior-of-multiple-traffic-selectors-in-ike-negotiations---differences-in-fortigate-vs-clavister-juniper-cisco
 properties:
 - - Up to date for
-  - Core 13.00.00Fortigate N.NN
-- - Supported since
-  - ''
-- - Not valid for
-  - ''
+  - - Core 13.00.00
+    - Fortigate N.NN
 - - Status
   - - OK
 published: 'true'
 redirect_from:
 - /314126141/
 slug: '314126141'
-status:
-- OK
 tags: kb kbcore kbipsec kbikev2 kbike kbfortigate
 title: Behavior of multiple traffic selectors in IKE negotiations - differences in
   Fortigate vs Clavister,Juniper,Cisco
@@ -103,14 +98,12 @@ As a way of handling units being reconfigured / moved:
 
 
 # Related articles
-
-        {% assign list = "" | split:"" %}
-        {% assign articles = site.pages | where: "layout", "article" %}
-        {% for article in articles %}
-        {% if item.tags contains "kbipsec" or item.tags contains "kbikev2" %}
-            {% assign list = list | push: article %}
-            
-        {% endif %}
-        {% endfor %}
-        {% assign list = list | uniq %}
-        {% include listrelated.html articles = list %}
+{% assign list = "" | split:"" %}
+{% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
+{% for article in articles %}
+{% if article.tags contains "kbipsec" or article.tags contains "kbikev2" %}
+{% assign list = list | push: article %}
+{% endif %}
+{% endfor %}
+{% assign list = list | uniq %}
+{% include listrelated.html articles = list %}

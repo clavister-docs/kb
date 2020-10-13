@@ -7,14 +7,14 @@ layout: default
     <div style="flex: 1;">
         {{page.excerpt}}
         {% if page.toc %}
-            <p>{{ content | toc_only }}</p>
+            <p>{% include toc.html html=content %}</p>
         {% endif %}    
     </div>
     {% if page.properties and page.properties.size > 0 %}
     <div style="margin-left: 20px;">
-        <table>            
+        <table>
             {% for property in page.properties %}
-                <tr>
+                <tr style="vertical-align: top;">
                     <td>{{ property[0] }}</td>
                     <td>
                         {% if property[0] == "Status" %}
@@ -22,7 +22,13 @@ layout: default
                                 <span class="badge badge-{{ status | downcase }}">{{ status }}</span>
                             {% endfor %}
                         {% else %}
-                            {{ property[1] }}
+                            {% if property[1].first %}
+                                {% for val in property[1] %}
+                                    <div>{{ val }}</div>
+                                {% endfor %}
+                            {% else %}
+                                {{ property[1] }}
+                            {% endif %}
                         {% endif %}
                     </td>
                 </tr>

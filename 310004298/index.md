@@ -13,19 +13,18 @@ orig-title-slugified: how-to-set-up-airprint-airplay-mopria-cups-etc-with-mdns-d
 permalink: /310004298/how-to-set-up-airprint-airplay-mopria-cups-etc-with-mdns-dns-sd-bonjour-avahi-zeroconf-discovery-over-multicast-in-transparent-mode
 properties:
 - - Up to date for
-  - Core 12.00.21Core 13.00.00Mopria Print Service for Android 2.10.6CUPS (2019)
+  - - Core 12.00.21
+    - Core 13.00.00
+    - Mopria Print Service for Android 2.10.6
+    - CUPS (2019)
 - - Supported since
-  - Core 8.70.xx
-- - Not valid for
-  - ''
+  - - Core 8.70.xx
 - - Status
   - - OK
 published: 'true'
 redirect_from:
 - /310004298/
 slug: '310004298'
-status:
-- OK
 tags: kb kbcore kbhowto kbmdns kbmulticast kbtransparentmode kbairprint kbigmp
 title: How to set up AirPrint, AirPlay, Mopria, CUPS etc with mDNS,DNS-SD,Bonjour,Avahi,Zeroconf
   discovery over multicast in transparent mode
@@ -34,7 +33,7 @@ version: 32
 ---
 
 # mDNS? Bonjour? AirSomething?
-<div ac:name="panel" ac:schema-version="1" ac:macro-id="aef4ae9c-dd23-42cf-b81f-9697529467eb" class="panel"><ac:rich-text-body><img ac:name="information" src="../assets/img/information.svg"/> More specifically, <a href="http://www.dns-sd.org/">DNS-SD</a> _typically_ runs on top of mDNS, but technically speaking it can query a regular DNS server, too, if the server is configured to hand out these records. But that's unusual.
+<div ac:name="panel" ac:schema-version="1" ac:macro-id="aef4ae9c-dd23-42cf-b81f-9697529467eb" class="panel"><ac:rich-text-body><img ac:name="information" src="/assets/img/information.svg"/> More specifically, <a href="http://www.dns-sd.org/">DNS-SD</a> _typically_ runs on top of mDNS, but technically speaking it can query a regular DNS server, too, if the server is configured to hand out these records. But that's unusual.
 
 </ac:rich-text-body></div>First, it's important to understand that these are all (mostly) about UDP multicasts to address 224.0.0.251, port 5353. Aka "multicast DNS", mDNS.
 
@@ -50,7 +49,7 @@ Example mDNS response from a multifunction printer/scanner:
 
 
 # Strategy - IGMP or not?
-<div ac:name="panel" ac:schema-version="1" ac:macro-id="a296df52-0004-495e-832b-b01eb2fa27a4" class="panel"><ac:rich-text-body><img ac:name="information" src="../assets/img/information.svg"/> IGMP makes more sense for large data streams, where you want to limit the amount of traffic flowing. Here, you always want to receive the mDNS packets.
+<div ac:name="panel" ac:schema-version="1" ac:macro-id="a296df52-0004-495e-832b-b01eb2fa27a4" class="panel"><ac:rich-text-body><img ac:name="information" src="/assets/img/information.svg"/> IGMP makes more sense for large data streams, where you want to limit the amount of traffic flowing. Here, you always want to receive the mDNS packets.
 
 </ac:rich-text-body></div>We can opt to work with IGMP Rules (under the Routing subsection), which also works, but _assumes_ that all units speak IGMP correctly.
 
@@ -75,7 +74,7 @@ That's fine. Simply configure static routes. It's just that Transparent Mode on 
 With static routes + Transparent Mode, the only 2 differences will be:
 
 <ul><li>MAC addresses are not hidden</li><li>We can leave the IP TTL alone</li></ul>## Add Multiplex SAT rules for mDNS in both directions
-<div ac:name="panel" ac:schema-version="1" ac:macro-id="a21d8a07-3724-44d8-8428-64e22f0506b8" class="panel"><ac:rich-text-body><img ac:name="question" src="../assets/img/question.svg"/> _Can you use interface groups to make it a single rule?_
+<div ac:name="panel" ac:schema-version="1" ac:macro-id="a21d8a07-3724-44d8-8428-64e22f0506b8" class="panel"><ac:rich-text-body><img ac:name="question" src="/assets/img/question.svg"/> _Can you use interface groups to make it a single rule?_
 
 Yes, it'll work, but unfortunately the firewall <u>will also duplicate the packet back</u> out the interface it came from, which is <u>possibly dangerous</u> if there is another unit doing the same.
 
@@ -93,7 +92,7 @@ Therefore, mDNS multicasts have to be separately **allowed in both directions**.
 <ac:task-status>incomplete</ac:task-status>
 <ac:task-body><span>Make RFE about interface groups in sat multiplex - don't send back out where it came from!</span></ac:task-body>
 </ac:task>
-</ac:task-list><div ac:name="panel" ac:schema-version="1" ac:macro-id="53c86b68-e0d9-417b-930b-af8b1405e93f" class="panel"><ac:rich-text-body><span><img ac:name="information" src="../assets/img/information.svg"/> Technically, the firewall defaults to adding a route for 224.0.0.0/4 to "core" so you _could_ also set the destination interface to "core". </span>
+</ac:task-list><div ac:name="panel" ac:schema-version="1" ac:macro-id="53c86b68-e0d9-417b-930b-af8b1405e93f" class="panel"><ac:rich-text-body><span><img ac:name="information" src="/assets/img/information.svg"/> Technically, the firewall defaults to adding a route for 224.0.0.0/4 to "core" so you _could_ also set the destination interface to "core". </span>
 
 </ac:rich-text-body></div><span>Note the "Destination: any" in the filter - it does not make sense to filter according to the routing table here.</span>
 
@@ -145,14 +144,12 @@ Microsoft's mDNS implementation for instance, _may_ give you problems via Window
 
 
 # Related articles
-
-        {% assign list = "" | split:"" %}
-        {% assign articles = site.pages | where: "layout", "article" %}
-        {% for article in articles %}
-        {% if item.tags contains "kbmulticast" or item.tags contains "kbprint" %}
-            {% assign list = list | push: article %}
-            
-        {% endif %}
-        {% endfor %}
-        {% assign list = list | uniq %}
-        {% include listrelated.html articles = list %}
+{% assign list = "" | split:"" %}
+{% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
+{% for article in articles %}
+{% if article.tags contains "kbmulticast" or article.tags contains "kbprint" %}
+{% assign list = list | push: article %}
+{% endif %}
+{% endfor %}
+{% assign list = list | uniq %}
+{% include listrelated.html articles = list %}

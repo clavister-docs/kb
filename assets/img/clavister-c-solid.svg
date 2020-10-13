@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -11,3 +12,18 @@
 	v146.807c0.885,30.019,15.763,43.42,48.252,43.42h88.609c50.621,0,70.607-5.52,87.951-13.169
 	c-2.479,16.776-9.215,62.284-10.477,70.774c-10.996,0-275.496,0-275.496,0C143.592,570.429,107.459,534.816,107.459,464.579z"/>
 </svg>
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" width="612px" height="612px" viewBox="0 90 612 612" enable-background="new 0 90 612 612" xml:space="preserve">
+<title>Bootstrap</title>
+<path fill="#FFFFFF" d="M612,600c0,56.1-45.9,102-102,102H102C45.9,702,0,656.1,0,600V192C0,135.9,45.9,90,102,90h408
+	c56.1,0,102,45.9,102,102V600z"/>
+<path d="M107.459,464.579V327.428c0-70.251,36.133-105.856,107.4-105.856c0,0,266.535,0,277.213,0
+	c1.428,7.911,8.961,49.911,12.469,69.416c-16.641-7.998-41.438-11.822-76.252-11.822H324.271c-32.489,0-47.367,13.402-48.252,43.432
+	v146.807c0.885,30.019,15.763,43.42,48.252,43.42h88.609c50.621,0,70.607-5.52,87.951-13.169
+	c-2.479,16.776-9.215,62.284-10.477,70.774c-10.996,0-275.496,0-275.496,0C143.592,570.429,107.459,534.816,107.459,464.579z"/>
+</svg>
+>>>>>>> 665bc549051a2505ae9fcd0bee97c3a8da997539

@@ -2,4 +2,6 @@
 {% for article in include.articles %}
 * [{{article.title}}]({{article.url}})  <small>{{article.tags}}</small>
 {% endfor %}
+{% else %}
+No related articles found.
 {% endif %}

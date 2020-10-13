@@ -10,9 +10,8 @@ repository: clavister-docs/kb
 plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
-  - jekyll-toc
 
-url: "https://clavister-docs.github.io" # "url:" is needed by jekyll-sitemap: see https://github.com/jekyll/jekyll-sitemap
+url: "https://kb.clavister.com" # "url:" is needed by jekyll-sitemap: see https://github.com/jekyll/jekyll-sitemap
 
 redirect_from:
   json: false

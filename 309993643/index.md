@@ -14,15 +14,13 @@ orig-title-slugified: ha-disallowed-on-sync-iface-log-events-with-rule-ha-restri
 permalink: /309993643/ha-disallowed-on-sync-iface-log-events-with-rule-ha-restrictsyncif-for-reverse-arp-rarp-and-igmp
 properties:
 - - Up to date for
-  - Core 12.00.20
+  - - Core 12.00.20
 - - Status
   - - OK
 published: 'true'
 redirect_from:
 - /309993643/
 slug: '309993643'
-status:
-- OK
 tags: kb kbvmware kblog kbha kbrarp kbarp kbcore
 title: 'HA: disallowed_on_sync_iface log events with rule=HA_RestrictSyncIf for Reverse
   ARP, RARP, and IGMP'
@@ -38,14 +36,12 @@ It is however completely safe to disable "Notify Switches" on vhost interfaces u
 <a href="https://www.google.com/search?q=esxi+%22notify+switches%22+setting+%22nic+teaming%22+rarp">Google: esxi "notify switches" setting "nic teaming" rarp</a>
 
 # Related articles
-
-        {% assign list = "" | split:"" %}
-        {% assign articles = site.pages | where: "layout", "article" %}
-        {% for article in articles %}
-        {% if item.tags contains "kbvmware" or item.tags contains "kbha" %}
-            {% assign list = list | push: article %}
-            
-        {% endif %}
-        {% endfor %}
-        {% assign list = list | uniq %}
-        {% include listrelated.html articles = list %}
+{% assign list = "" | split:"" %}
+{% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
+{% for article in articles %}
+{% if article.tags contains "kbvmware" or article.tags contains "kbha" %}
+{% assign list = list | push: article %}
+{% endif %}
+{% endfor %}
+{% assign list = list | uniq %}
+{% include listrelated.html articles = list %}

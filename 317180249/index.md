@@ -12,15 +12,13 @@ orig-title-slugified: explicit-congestion-notification---ecn-ece-cwe-ns-ect-ce
 permalink: /317180249/explicit-congestion-notification---ecn-ece-cwe-ns-ect-ce
 properties:
 - - Up to date for
-  - Core 12.00.24, 13.00.06
+  - - Core 12.00.24, 13.00.06
 - - Status
   - - OK
 published: 'true'
 redirect_from:
 - /317180249/
 slug: '317180249'
-status:
-- OK
 tags: kb kbtcp kbecn
 title: Explicit Congestion Notification - ECN, ECE, CWE, NS, ECT, CE
 toc: true
@@ -65,14 +63,12 @@ As of mid 2020, v12.00.24 and v13.00.06, the TCPECN setting defaults to **"Ignor
 
 # Further reading
 <ul><li><a href="https://en.wikipedia.org/wiki/Explicit_Congestion_Notification">https://en.wikipedia.org/wiki/Explicit_Congestion_Notification</a></li><li><a href="https://tools.ietf.org/html/rfc8087">RFC8087 - The Benefits of Using Explicit Congestion Notification (ECN)</a></li></ul># Related articles
-
-        {% assign list = "" | split:"" %}
-        {% assign articles = site.pages | where: "layout", "article" %}
-        {% for article in articles %}
-        {% if item.tags contains "kbtcp" or item.tags contains "kbecn" %}
-            {% assign list = list | push: article %}
-            
-        {% endif %}
-        {% endfor %}
-        {% assign list = list | uniq %}
-        {% include listrelated.html articles = list %}
+{% assign list = "" | split:"" %}
+{% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
+{% for article in articles %}
+{% if article.tags contains "kbtcp" or article.tags contains "kbecn" %}
+{% assign list = list | push: article %}
+{% endif %}
+{% endfor %}
+{% assign list = list | uniq %}
+{% include listrelated.html articles = list %}

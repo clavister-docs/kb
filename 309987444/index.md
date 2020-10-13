@@ -11,7 +11,7 @@ orig-title-slugified: how-to-adjust-rx-and-tx-ring-sizes-queue-lengths-of-ethern
 permalink: /309987444/how-to-adjust-rx-and-tx-ring-sizes-queue-lengths-of-ethernet-interfaces
 properties:
 - - Up to date for
-  - Core 12.00.19
+  - - Core 12.00.19
 - - Status
   - - DRAFT
     - OK
@@ -19,9 +19,6 @@ published: 'true'
 redirect_from:
 - /309987444/
 slug: '309987444'
-status:
-- DRAFT
-- OK
 tags: kb kbcore kbhowto kbethernet kbpacketloss kbcpu
 title: How to adjust RX and TX ring sizes (queue lengths) of Ethernet interfaces
 toc: true
@@ -49,14 +46,12 @@ Use the **mem** console command to see how much free RAM there is. If there is n
 After changing HighBuffers or MaxConnections, a core restart is needed (e.g "shutdown 1" on the console).
 
 # Related articles
-
-        {% assign list = "" | split:"" %}
-        {% assign articles = site.pages | where: "layout", "article" %}
-        {% for article in articles %}
-        {% if item.tags contains "kbethernet" or item.tags contains "kbpacketloss" %}
-            {% assign list = list | push: article %}
-            
-        {% endif %}
-        {% endfor %}
-        {% assign list = list | uniq %}
-        {% include listrelated.html articles = list %}
+{% assign list = "" | split:"" %}
+{% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
+{% for article in articles %}
+{% if article.tags contains "kbethernet" or article.tags contains "kbpacketloss" %}
+{% assign list = list | push: article %}
+{% endif %}
+{% endfor %}
+{% assign list = list | uniq %}
+{% include listrelated.html articles = list %}

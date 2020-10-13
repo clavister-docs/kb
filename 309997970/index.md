@@ -10,15 +10,13 @@ orig-title-slugified: what-packets-are-counted-in-forwarded-bps-and-forwarded-pp
 permalink: /309997970/what-packets-are-counted-in-forwarded-bps-and-forwarded-pps-statistics-and-snmp-counters-
 properties:
 - - Up to date for
-  - Core 12.00.20
+  - - Core 12.00.20
 - - Status
   - - OK
 published: 'true'
 redirect_from:
 - /309997970/
 slug: '309997970'
-status:
-- OK
 tags: kb kbcore kbstatistics kbsnmp
 title: What packets are counted in "Forwarded bps" and "Forwarded pps" statistics
   (and SNMP) counters?
@@ -40,14 +38,12 @@ ICMP errors and TCP RSTs are similarly counted for legacy reasons.
 
 
 # Related articles
-
-        {% assign list = "" | split:"" %}
-        {% assign articles = site.pages | where: "layout", "article" %}
-        {% for article in articles %}
-        {% if item.tags contains "kbstatistics" or item.tags contains "kbsnmp" %}
-            {% assign list = list | push: article %}
-            
-        {% endif %}
-        {% endfor %}
-        {% assign list = list | uniq %}
-        {% include listrelated.html articles = list %}
+{% assign list = "" | split:"" %}
+{% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
+{% for article in articles %}
+{% if article.tags contains "kbstatistics" or article.tags contains "kbsnmp" %}
+{% assign list = list | push: article %}
+{% endif %}
+{% endfor %}
+{% assign list = list | uniq %}
+{% include listrelated.html articles = list %}

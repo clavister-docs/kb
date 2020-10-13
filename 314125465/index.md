@@ -10,15 +10,15 @@ orig-title-slugified: why-does-wireshark-say-that-snmpv3-traps-sent-from-cos-cor
 permalink: /314125465/why-does-wireshark-say-that-snmpv3-traps-sent-from-cos-core-are-snmpv2-trap-
 properties:
 - - Up to date for
-  - Core 12.00.22Core 13.00.01WireShark 2.6.10
+  - - Core 12.00.22
+    - Core 13.00.01
+    - WireShark 2.6.10
 - - Status
   - - OK
 published: 'true'
 redirect_from:
 - /314125465/
 slug: '314125465'
-status:
-- OK
 tags: kb kbsnmp kbcore kbwireshark
 title: Why does WireShark say that SNMPv3 traps sent from cOS Core are "snmpV2-trap"?
 toc: true
@@ -44,14 +44,12 @@ Note that the contained data is still identified as a "v2 trap", it is unchanged
 
 
 # Related articles
-
-        {% assign list = "" | split:"" %}
-        {% assign articles = site.pages | where: "layout", "article" %}
-        {% for article in articles %}
-        {% if item.tags contains "kbsnmp" %}
-            {% assign list = list | push: article %}
-            
-        {% endif %}
-        {% endfor %}
-        {% assign list = list | uniq %}
-        {% include listrelated.html articles = list %}
+{% assign list = "" | split:"" %}
+{% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
+{% for article in articles %}
+{% if article.tags contains "kbsnmp" %}
+{% assign list = list | push: article %}
+{% endif %}
+{% endfor %}
+{% assign list = list | uniq %}
+{% include listrelated.html articles = list %}

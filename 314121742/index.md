@@ -11,17 +11,14 @@ orig-title-slugified: windows-10-ikev2-ipsec-error-main-mode-sa-lifetime-expired
 permalink: /314121742/windows-10-ikev2-ipsec-error-main-mode-sa-lifetime-expired-or-peer-sent-a-main-mode-delete-
 properties:
 - - Up to date for
-  - Core 12.00.21Windows 10.0.18362 (2019)
-- - Not valid for
-  - ''
+  - - Core 12.00.21
+    - Windows 10.0.18362 (2019)
 - - Status
   - - OK
 published: 'true'
 redirect_from:
 - /314121742/
 slug: '314121742'
-status:
-- OK
 tags: kb kbcore kbvpn kbipsec kbikev2 kbwindows kbdh
 title: 'Windows 10 IKEv2 IPsec error: "Main mode SA lifetime expired or peer sent
   a main mode delete"'
@@ -51,14 +48,12 @@ You have two choices:
 
 
 # Related articles
-
-        {% assign list = "" | split:"" %}
-        {% assign articles = site.pages | where: "layout", "article" %}
-        {% for article in articles %}
-        {% if item.tags contains "kbikev2" or item.tags contains "kbdh" %}
-            {% assign list = list | push: article %}
-            
-        {% endif %}
-        {% endfor %}
-        {% assign list = list | uniq %}
-        {% include listrelated.html articles = list %}
+{% assign list = "" | split:"" %}
+{% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
+{% for article in articles %}
+{% if article.tags contains "kbikev2" or article.tags contains "kbdh" %}
+{% assign list = list | push: article %}
+{% endif %}
+{% endfor %}
+{% assign list = list | uniq %}
+{% include listrelated.html articles = list %}
