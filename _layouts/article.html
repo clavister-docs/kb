@@ -39,3 +39,11 @@ layout: default
 </div>
 
 {{content}} 
+
+<div style="text-align: right;">
+Tags
+{% assign tags = page.tags | split: " " %}
+{% for tag in tags %}
+<span style="display:inline-block; margin: 0 3px;padding: 3px 6px; border: 1px solid #ddd;border-radius: 3px;"><a href="#">{{tag}}</a></span>
+{% endfor %}
+</div>

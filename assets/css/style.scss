@@ -16,6 +16,7 @@ $header-bg-color-secondary: #1F3342;
 $section-headings-color: #215D83;
 $body-text-color: #525252;
 $body-link-color: #598BAC;
+$text-muted-color:#6c757d;
 
 $status-colors: (
     "draft":        #ff991f,
@@ -143,6 +144,98 @@ $status-colors: (
         &.focus {
         outline: 0;
         box-shadow: 0 0 0 .2rem rgba($color, .5);
+        }
+    }
+}
+
+.text-muted {
+    color: $text-muted-color !important;
+}
+
+.main-search {
+    margin-bottom: 30px;
+
+    .search-control {
+        position:relative;
+        display: flex;
+        min-width: 100px;
+
+        > input[type="text"] {
+            width: 100%;
+            padding: 10px 5px 10px 40px;
+            border-radius: 0.3rem;
+            border:1px solid #aaa;
+
+            &:hover, &:active, &:focus {
+                border-color: $body-link-color;
+                outline: none;
+
+                ~ .search-btn .search-icon .search-path {
+                    stroke: $body-link-color;
+                }
+            }
+        }
+
+        &:hover, &:active, &:focus {
+            > input[type="text"] {
+                border-color: $body-link-color;
+                outline: none;
+            }
+
+            .search-btn .search-icon .search-path {
+                stroke: $body-link-color;
+            }
+        }
+
+        > .search-btn {
+            position: absolute;
+            left: 5px;
+            top: calc((100% - 20px) / 2);
+            border: 0;
+            background:none;
+
+            &:hover, &:active, &:focus {
+                border: 0;
+                outline: none;
+            }
+
+            .search-icon {
+                width: 20px;
+                height: 20px;
+                
+                .search-path {
+                    stroke-width: 2px;
+                    stroke: #aaa;
+                }
+            }
+        }
+
+        > .clear-btn {
+            position: absolute;
+            display: none;
+            top: calc((100% - 1.6em) / 2);
+            right: 8px;
+            font-weight: bold;
+            font-size: 1.6em;
+            cursor: pointer;
+
+            &:hover {
+                color: $body-link-color;
+            }
+        }
+    }
+
+    .search-results {
+        > div {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            border-bottom: 1px solid #efefef;
+
+            > p {
+                margin: 5px 0;
+            }
         }
     }
 }

@@ -1,0 +1,14 @@
+---
+---
+[
+  {% assign articles = site.pages | where: "layout", "article" %}
+  {% for article in articles %}
+    {
+      "title"    : "{{ article.title | escape }}",
+      "tags"     : "{{ article.tags | join: ' ' }}",
+      "_excerpt"  : "{{ article.excerpt | strip_html | strip_newlines | escape | truncate: 200 }}",
+      "url"      : "{{ site.baseurl }}{{ article.url }}",
+      "date"     : "{{ article.last_modified_at }}"
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
