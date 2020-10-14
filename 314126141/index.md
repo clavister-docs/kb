@@ -23,7 +23,7 @@ published: 'true'
 redirect_from:
 - /314126141/
 slug: '314126141'
-tags: kb kbcore kbipsec kbikev2 kbike kbfortigate
+tags: core ipsec ikev2 ike fortigate
 title: Behavior of multiple traffic selectors in IKE negotiations - differences in
   Fortigate vs Clavister,Juniper,Cisco
 toc: true
@@ -101,7 +101,8 @@ As a way of handling units being reconfigured / moved:
 {% assign list = "" | split:"" %}
 {% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
 {% for article in articles %}
-{% if article.tags contains "kbipsec" or article.tags contains "kbikev2" %}
+{% assign tags = article.tags | split: " " %}
+{% if tags contains "kbipsec" or tags contains "kbikev2" %}
 {% assign list = list | push: article %}
 {% endif %}
 {% endfor %}

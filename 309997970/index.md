@@ -17,7 +17,7 @@ published: 'true'
 redirect_from:
 - /309997970/
 slug: '309997970'
-tags: kb kbcore kbstatistics kbsnmp
+tags: core statistics snmp
 title: What packets are counted in "Forwarded bps" and "Forwarded pps" statistics
   (and SNMP) counters?
 toc: false
@@ -41,7 +41,8 @@ ICMP errors and TCP RSTs are similarly counted for legacy reasons.
 {% assign list = "" | split:"" %}
 {% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
 {% for article in articles %}
-{% if article.tags contains "kbstatistics" or article.tags contains "kbsnmp" %}
+{% assign tags = article.tags | split: " " %}
+{% if tags contains "kbstatistics" or tags contains "kbsnmp" %}
 {% assign list = list | push: article %}
 {% endif %}
 {% endfor %}

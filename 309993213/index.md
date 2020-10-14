@@ -19,7 +19,7 @@ published: 'true'
 redirect_from:
 - /309993213/
 slug: '309993213'
-tags: kb kblog kbtcp kbmtu kbcore kbmss
+tags: log tcp mtu core mss
 title: tcp_mss_above_log_level log events for MSS 8960 being higher than TCPMSSLogLevel
   7000
 toc: true
@@ -42,7 +42,8 @@ The default value for this setting will be changed in a future release of cOS Co
 {% assign list = "" | split:"" %}
 {% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
 {% for article in articles %}
-{% if article.tags contains "kbtcp" or article.tags contains "kbmtu" %}
+{% assign tags = article.tags | split: " " %}
+{% if tags contains "kbtcp" or tags contains "kbmtu" %}
 {% assign list = list | push: article %}
 {% endif %}
 {% endfor %}

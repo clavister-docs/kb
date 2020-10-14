@@ -1,10 +1,10 @@
 ---
 confluence-id: '309987444'
-date: '2020-09-07T00:29:20.000+02:00'
+date: '2020-10-13T21:36:13.000+02:00'
 excerpt: In high-load scenarios, you may need to increase to the size of RX and TX
   rings beyond the default settings (e.g. Ringsize_e1000_rx), and possibly also increase
   the total number of packet buffers in the system (Highbuffers).
-last_modified_at: '2020-09-07T00:29:20.000+02:00'
+last_modified_at: '2020-10-13T21:36:13.000+02:00'
 layout: article
 orig-title: How to adjust RX and TX ring sizes (queue lengths) of Ethernet interfaces
 orig-title-slugified: how-to-adjust-rx-and-tx-ring-sizes-queue-lengths-of-ethernet-interfaces
@@ -19,10 +19,10 @@ published: 'true'
 redirect_from:
 - /309987444/
 slug: '309987444'
-tags: kb kbcore kbhowto kbethernet kbpacketloss kbcpu
+tags: core howto ethernet packetloss cpu
 title: How to adjust RX and TX ring sizes (queue lengths) of Ethernet interfaces
 toc: true
-version: 8
+version: 12
 ---
 
 # Suitable ring sizes for gigabit Ethernet interfaces
@@ -49,7 +49,8 @@ After changing HighBuffers or MaxConnections, a core restart is needed (e.g "shu
 {% assign list = "" | split:"" %}
 {% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
 {% for article in articles %}
-{% if article.tags contains "kbethernet" or article.tags contains "kbpacketloss" %}
+{% assign tags = article.tags | split: " " %}
+{% if tags contains "kbethernet" or tags contains "kbpacketloss" %}
 {% assign list = list | push: article %}
 {% endif %}
 {% endfor %}

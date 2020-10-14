@@ -17,7 +17,7 @@ published: 'true'
 redirect_from:
 - /317189514/
 slug: '317189514'
-tags: kb kbincontrol
+tags: incontrol
 title: InControl command-line options
 toc: false
 version: 5

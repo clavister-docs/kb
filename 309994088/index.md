@@ -18,7 +18,7 @@ published: 'true'
 redirect_from:
 - /309994088/
 slug: '309994088'
-tags: kb kbcore kbipsec kbrules kbaccess
+tags: core ipsec rules access
 title: Does IPsecBeforeRules trigger before Access rules?
 toc: false
 version: 3
@@ -31,7 +31,8 @@ version: 3
 {% assign list = "" | split:"" %}
 {% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
 {% for article in articles %}
-{% if article.tags contains "kbrules" or article.tags contains "kbaccess" %}
+{% assign tags = article.tags | split: " " %}
+{% if tags contains "kbrules" or tags contains "kbaccess" %}
 {% assign list = list | push: article %}
 {% endif %}
 {% endfor %}

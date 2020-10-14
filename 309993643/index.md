@@ -21,7 +21,7 @@ published: 'true'
 redirect_from:
 - /309993643/
 slug: '309993643'
-tags: kb kbvmware kblog kbha kbrarp kbarp kbcore
+tags: vmware log ha rarp arp core
 title: 'HA: disallowed_on_sync_iface log events with rule=HA_RestrictSyncIf for Reverse
   ARP, RARP, and IGMP'
 toc: false
@@ -39,7 +39,8 @@ It is however completely safe to disable "Notify Switches" on vhost interfaces u
 {% assign list = "" | split:"" %}
 {% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
 {% for article in articles %}
-{% if article.tags contains "kbvmware" or article.tags contains "kbha" %}
+{% assign tags = article.tags | split: " " %}
+{% if tags contains "kbvmware" or tags contains "kbha" %}
 {% assign list = list | push: article %}
 {% endif %}
 {% endfor %}

@@ -25,7 +25,7 @@ published: 'true'
 redirect_from:
 - /310004298/
 slug: '310004298'
-tags: kb kbcore kbhowto kbmdns kbmulticast kbtransparentmode kbairprint kbigmp
+tags: core howto mdns multicast transparentmode airprint igmp
 title: How to set up AirPrint, AirPlay, Mopria, CUPS etc with mDNS,DNS-SD,Bonjour,Avahi,Zeroconf
   discovery over multicast in transparent mode
 toc: true
@@ -128,7 +128,7 @@ Well, <a href="https://tools.ietf.org/html/rfc6762">https://tools.ietf.org/html/
    all packets with TTLs other than 255.
 </pre>And additionally, there are recommendations for dropping mDNS packets if the source IP address does not belong on the local network.
 
-<ac:emoticon ac:name="warning"/> If you find an mDNS that implementation refuses to cross the firewall boundary, you may have to renumber your IP ranges to match.
+<img ac:name="warning" src="/assets/img/warning.svg"/> If you find an mDNS that implementation refuses to cross the firewall boundary, you may have to renumber your IP ranges to match.
 
 Microsoft's mDNS implementation for instance, _may_ give you problems via Windows Defender Firewall. But here you can simply re-configure the rules.
 
@@ -147,7 +147,8 @@ Microsoft's mDNS implementation for instance, _may_ give you problems via Window
 {% assign list = "" | split:"" %}
 {% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
 {% for article in articles %}
-{% if article.tags contains "kbmulticast" or article.tags contains "kbprint" %}
+{% assign tags = article.tags | split: " " %}
+{% if tags contains "kbmulticast" or tags contains "kbprint" %}
 {% assign list = list | push: article %}
 {% endif %}
 {% endfor %}

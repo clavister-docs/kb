@@ -19,7 +19,7 @@ published: 'true'
 redirect_from:
 - /317180249/
 slug: '317180249'
-tags: kb kbtcp kbecn
+tags: tcp ecn
 title: Explicit Congestion Notification - ECN, ECE, CWE, NS, ECT, CE
 toc: true
 version: 9
@@ -66,7 +66,8 @@ As of mid 2020, v12.00.24 and v13.00.06, the TCPECN setting defaults to **"Ignor
 {% assign list = "" | split:"" %}
 {% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
 {% for article in articles %}
-{% if article.tags contains "kbtcp" or article.tags contains "kbecn" %}
+{% assign tags = article.tags | split: " " %}
+{% if tags contains "kbtcp" or tags contains "kbecn" %}
 {% assign list = list | push: article %}
 {% endif %}
 {% endfor %}

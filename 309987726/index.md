@@ -16,7 +16,7 @@ published: 'true'
 redirect_from:
 - /309987726/
 slug: '309987726'
-tags: kb kbethernet kboui
+tags: ethernet oui
 title: Best ways of looking up the MAC Vendor (OUI) for an Ethernet hardware address
 toc: true
 version: 14
@@ -87,7 +87,8 @@ With this setting ON, "c1-4a" is replaced by a unique number for that Ethernet i
 {% assign list = "" | split:"" %}
 {% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
 {% for article in articles %}
-{% if article.tags contains "kbethernet" or article.tags contains "kboui" %}
+{% assign tags = article.tags | split: " " %}
+{% if tags contains "kbethernet" or tags contains "kboui" %}
 {% assign list = list | push: article %}
 {% endif %}
 {% endfor %}

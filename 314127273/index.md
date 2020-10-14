@@ -22,7 +22,7 @@ published: 'true'
 redirect_from:
 - /314127273/
 slug: '314127273'
-tags: kb kbcore kbipreputation kbblacklist kbthreatprevention
+tags: core ipreputation lacklist threatprevention
 title: Can blacklist timeouts (TTL,lifetime) for "Scanner Protection" or "Botnet Blocking"
   be changed or increased?
 toc: false
@@ -43,7 +43,8 @@ And, yes, the blacklisting lifetimes _can_ be configured for these.
 {% assign list = "" | split:"" %}
 {% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
 {% for article in articles %}
-{% if article.tags contains "kbthreatprevention" or article.tags contains "kbblacklist" %}
+{% assign tags = article.tags | split: " " %}
+{% if tags contains "kbthreatprevention" or tags contains "kbblacklist" %}
 {% assign list = list | push: article %}
 {% endif %}
 {% endfor %}

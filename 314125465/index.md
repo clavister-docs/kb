@@ -19,7 +19,7 @@ published: 'true'
 redirect_from:
 - /314125465/
 slug: '314125465'
-tags: kb kbsnmp kbcore kbwireshark
+tags: snmp core wireshark
 title: Why does WireShark say that SNMPv3 traps sent from cOS Core are "snmpV2-trap"?
 toc: true
 version: 3
@@ -47,7 +47,8 @@ Note that the contained data is still identified as a "v2 trap", it is unchanged
 {% assign list = "" | split:"" %}
 {% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
 {% for article in articles %}
-{% if article.tags contains "kbsnmp" %}
+{% assign tags = article.tags | split: " " %}
+{% if tags contains "kbsnmp" %}
 {% assign list = list | push: article %}
 {% endif %}
 {% endfor %}

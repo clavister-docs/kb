@@ -19,7 +19,7 @@ published: 'true'
 redirect_from:
 - /314121742/
 slug: '314121742'
-tags: kb kbcore kbvpn kbipsec kbikev2 kbwindows kbdh
+tags: core vpn ipsec ikev2 windows dh
 title: 'Windows 10 IKEv2 IPsec error: "Main mode SA lifetime expired or peer sent
   a main mode delete"'
 toc: true
@@ -51,7 +51,8 @@ You have two choices:
 {% assign list = "" | split:"" %}
 {% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
 {% for article in articles %}
-{% if article.tags contains "kbikev2" or article.tags contains "kbdh" %}
+{% assign tags = article.tags | split: " " %}
+{% if tags contains "kbikev2" or tags contains "kbdh" %}
 {% assign list = list | push: article %}
 {% endif %}
 {% endfor %}
