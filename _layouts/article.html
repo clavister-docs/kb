@@ -3,20 +3,20 @@ layout: default
 ---
 <h1>{{page.title}}</h1>
 
-<div style="display: flex;justify-content: space-between;">
-    <div style="flex: 1;">
+<div class="d-flex justify-content-between">
+    <div>
         {{page.excerpt}}
         {% if page.toc %}
-            <p>{% include toc.html html=content %}</p>
+            <p>{% include toc.html html=content class="toc" %}</p>
         {% endif %}    
     </div>
     {% if page.properties and page.properties.size > 0 %}
     <div style="margin-left: 20px;">
         <table>
             {% for property in page.properties %}
-                <tr style="vertical-align: top;">
-                    <td>{{ property[0] }}</td>
-                    <td>
+                <tr class="align-top">
+                    <td class="text-nowrap">{{ property[0] }}</td>
+                    <td class="text-nowrap">
                         {% if property[0] == "Status" %}
                             {% for status in property[1] %}
                                 <span class="badge badge-{{ status | downcase }}">{{ status }}</span>
@@ -40,10 +40,10 @@ layout: default
 
 {{content}} 
 
-<div style="text-align: right;">
+<div class="text-right">
 Tags
 {% assign tags = page.tags | split: " " %}
 {% for tag in tags %}
-<span style="display:inline-block; margin: 0 3px;padding: 3px 6px; border: 1px solid #ddd;border-radius: 3px;"><a href="#">{{tag}}</a></span>
+<span class="tag"><a href="#">{{tag}}</a></span>
 {% endfor %}
 </div>
