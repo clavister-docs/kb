@@ -4,6 +4,9 @@
   * Licensed under the MIT License.
   */
 
+  // Slightly modified, see ANVE comments 
+  // For now just manually minified using https://javascript-minifier.com/, to simple-jekyll-search.min.js
+
  (function(){
     'use strict'
     
@@ -28,7 +31,7 @@
     function compile (data) {
       return options.template.replace(options.pattern, function (match, prop) {
         //var value = options.middleware(prop, data[prop], options.template)
-        var value = options.middleware(prop, prop !== 'urltext' ? data[prop] : data["url"], options.template) // ANVE
+        var value = options.middleware(prop, prop !== 'urltext' ? data[prop] : data["url"], options.template) // ANVE: Hack to allow highlighting url without messing it up
         if (typeof value !== 'undefined') {
           return value
         }
@@ -182,7 +185,7 @@
     function findMatchesInObject (obj, crit, strategy, opt) {
       for (var key in obj) {
         // if (!isExcluded(obj[key], opt.exclude) && strategy.matches(obj[key], crit)) {
-        if (!key.startsWith('_') && !isExcluded(obj[key], opt.exclude) && strategy.matches(obj[key], crit)) { // ANVE
+        if (!key.startsWith('_') && !isExcluded(obj[key], opt.exclude) && strategy.matches(obj[key], crit)) { // ANVE: Properties prefixed with underscore will not be evaluated in serach, but still available in the result
           return obj
         }
       }

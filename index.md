@@ -52,7 +52,7 @@
     </div>
 </div>
 
-<script src="/assets/js/simple-jekyll-search.js" type="text/javascript"></script>
+<script src="/assets/js/simple-jekyll-search.min.js" type="text/javascript"></script>
 <script type="text/javascript">
     SimpleJekyllSearch({
         searchInput: document.getElementById('search-input'),
