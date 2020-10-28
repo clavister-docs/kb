@@ -1,0 +1,4 @@
+---
+title: cpu
+layout: taglist
+---

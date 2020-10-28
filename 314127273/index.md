@@ -29,6 +29,7 @@ toc: false
 version: 5
 ---
 
+
 # See also: Threshold Rules
 If you want to perform your own rate logic on hosts scanning your networks, please see "Threshold Rules".
 
@@ -37,14 +38,12 @@ Threshold Rules are the only way to deal with rogue internal hosts attempting to
 And, yes, the blacklisting lifetimes _can_ be configured for these.
 
 
-
-
 # Related articles
 {% assign list = "" | split:"" %}
 {% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
 {% for article in articles %}
 {% assign tags = article.tags | split: " " %}
-{% if tags contains "kbthreatprevention" or tags contains "kbblacklist" %}
+{% if tags contains "threatprevention" or tags contains "blacklist" %}
 {% assign list = list | push: article %}
 {% endif %}
 {% endfor %}

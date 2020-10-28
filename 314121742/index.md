@@ -26,6 +26,7 @@ toc: true
 version: 13
 ---
 
+<img src="image2019-12-5_19-22-44.png" class="border" style="height: 250px;"/>
 # Windows 10 (2019) IKEv2 Phase 1 proposals
 First, we negotiate the encryption parameters used for IKE (port 500/4500) itself.
 
@@ -35,6 +36,7 @@ With Windows IKEv2 "Require encryption" and "Maximum strength encryption" modes,
 
 In other words, if your proposal list includes 3DES (reasonable), but SHA1 is removed (reasonable but slightly paranoid), the result will be **3DES + SHA2-128**.
 
+
 # The problem: Phase 2 (IPsec / main mode) proposals
 Windows 10 (2019) has a very limited proposal list for Phase 2:
 
@@ -43,16 +45,15 @@ Windows 10 (2019) has a very limited proposal list for Phase 2:
 You have two choices:
 
 <ul><li>Add SHA1 to your IPsec (Phase 2 / main mode) proposal list.</li><li>Registry-patch Windows to use stronger crypto See e.g. <a href="https://duckduckgo.com/?q=NegotiateDH2048_AES256">the "NegotiateDH2048_AES256" registry value
-</a></li></ul># Footnotes
+</a></li></ul>
+# Footnotes
 <ul><li>Diffie-Hellman group 2 (1024 bit) is no longer considered secure against state-level actors or equivalent. See <ac:link><ri:page ri:content-title="LogJam"/><ac:plain-text-link-body>LogJam</ac:plain-text-link-body></ac:link>.</li><li>SHA1 is known to be flawed, but is still fine for use as an HMAC, as the flaws are mitigated by the HMAC construct. Additionally, there is simply no time to mount an attack from one packet to the next</li><li>As an aside, Windows 10 does not speak IKEv2 correctly. The 6 proposals in Phase 1 should simply be expressed as a single proposal with all supported algorithms listed - see <a href="https://tools.ietf.org/html/rfc5996#section-3.3">RFC5996, page 76</a>.</li></ul>
-
-
 # Related articles
 {% assign list = "" | split:"" %}
 {% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
 {% for article in articles %}
 {% assign tags = article.tags | split: " " %}
-{% if tags contains "kbikev2" or tags contains "kbdh" %}
+{% if tags contains "ikev2" or tags contains "dh" %}
 {% assign list = list | push: article %}
 {% endif %}
 {% endfor %}

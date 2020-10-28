@@ -24,10 +24,13 @@ toc: false
 version: 5
 ---
 
+
 # The base principle
-<ul><li>**We count bytes SENT at IP level** = bytes given to the layer 2 drivers. 
-<ul><li>Note that past this point, ARP resolution, tunnel negotiation, interface drivers can still fail to deliver the packet. This does not affect the "Forwarded" statistic.</li></ul></li><li>Only bytes Layer 3 and up are counted = IP headers and the data beneath them. Not Ethernet headers, outer ESP where the firewall is a VPN endpoint, etc.</li><li>Packets originated by the firewall itself (log data, management traffic, etc) are (mostly) not counted.</li></ul>## But VPN tunnels?
+<ul><li><strong>We count bytes SENT at IP level</strong> = bytes given to the layer 2 drivers. 
+<ul><li>Note that past this point, ARP resolution, tunnel negotiation, interface drivers can still fail to deliver the packet. This does not affect the "Forwarded" statistic.</li></ul></li><li>Only bytes Layer 3 and up are counted = IP headers and the data beneath them. Not Ethernet headers, outer ESP where the firewall is a VPN endpoint, etc.</li><li>Packets originated by the firewall itself (log data, management traffic, etc) are (mostly) not counted.</li></ul>
+## But VPN tunnels?
 We measure **data forwarded into / out of a tunnel**, not the outer encapsulation, as that part of the packet is considered "originated by the firewall itself".
+
 
 ## But some legacy exceptions
 ICMP Echo responses are counted for legacy reasons.
@@ -35,14 +38,12 @@ ICMP Echo responses are counted for legacy reasons.
 ICMP errors and TCP RSTs are similarly counted for legacy reasons.
 
 
-
-
 # Related articles
 {% assign list = "" | split:"" %}
 {% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
 {% for article in articles %}
 {% assign tags = article.tags | split: " " %}
-{% if tags contains "kbstatistics" or tags contains "kbsnmp" %}
+{% if tags contains "statistics" or tags contains "snmp" %}
 {% assign list = list | push: article %}
 {% endif %}
 {% endfor %}

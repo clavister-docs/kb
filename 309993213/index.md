@@ -26,9 +26,10 @@ toc: true
 version: 6
 ---
 
-<img ac:height="170" src="image2019-9-6_23-26-26.png"/>
+<img src="image2019-9-6_23-26-26.png" style="height: 170px;"/>
 
 Log events like the above are becoming a common occurence as more and more servers become connected to jumbogram networks - even though the Internet at large does not support larger frames than standard Ethernet.
+
 
 # Changing the TCPMSSLogLevel
 To suppress the log events, simply set the "TCPMSSLogLevel" setting to e.g. 9000. Or 8960 if you like.
@@ -36,14 +37,12 @@ To suppress the log events, simply set the "TCPMSSLogLevel" setting to e.g. 9000
 The default value for this setting will be changed in a future release of cOS Core.
 
 
-
-
 # Related articles
 {% assign list = "" | split:"" %}
 {% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
 {% for article in articles %}
 {% assign tags = article.tags | split: " " %}
-{% if tags contains "kbtcp" or tags contains "kbmtu" %}
+{% if tags contains "tcp" or tags contains "mtu" %}
 {% assign list = list | push: article %}
 {% endif %}
 {% endfor %}

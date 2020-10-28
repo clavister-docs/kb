@@ -25,14 +25,12 @@ version: 3
 ---
 
 
-
-
 # Related articles
 {% assign list = "" | split:"" %}
 {% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
 {% for article in articles %}
 {% assign tags = article.tags | split: " " %}
-{% if tags contains "kbrules" or tags contains "kbaccess" %}
+{% if tags contains "rules" or tags contains "access" %}
 {% assign list = list | push: article %}
 {% endif %}
 {% endfor %}

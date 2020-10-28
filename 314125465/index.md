@@ -25,22 +25,23 @@ toc: true
 version: 3
 ---
 
+
 # Manually testing SNMP trap behavior using ucs-snmp
 This can be tested on e.g. a Linux host:
 
-<ac:structured-macro ac:name="code" ac:schema-version="1" ac:macro-id="011b77c8-f65c-43fb-b986-620cc4483b60"><ac:parameter ac:name="language">bash</ac:parameter><ac:plain-text-body>$ snmptrap -v 2c -c public 192.168.0.101 '' 1.3.6.1.4.1.8072.2.3.0.1 1.3.6.1.4.1.8072.2.3.2.1 i 123456
+<ac:structured-macro><ac:parameter>bash</ac:parameter><ac:plain-text-body>$ snmptrap -v 2c -c public 192.168.0.101 '' 1.3.6.1.4.1.8072.2.3.0.1 1.3.6.1.4.1.8072.2.3.2.1 i 123456
 
 $ snmptrap -v 3 -u ExampleSecurityName -l noAuthNoPriv 192.168.0.101 '' 1.3.6.1.4.1.8072.2.3.0.1 1.3.6.1.4.1.8072.2.3.2.1 i 123456</ac:plain-text-body></ac:structured-macro>If you walk inside the packet data, you'll see that the trap data itself is identical in both v2 and v3, but they're wrapped in different headers (v2 vs v3).
 
+
 ## SNMPv2 trap:
-<img ac:queryparams="effects=border-simple,shadow-kn" ac:width="600" src="image2020-1-3_16-32-38.png"/>
+<img src="image2020-1-3_16-32-38.png" class="border" style="width: 600px;"/>
+
 
 ## SNMPv3 trap
-<img ac:queryparams="effects=border-simple,shadow-kn" ac:width="600" src="image2020-1-3_17-7-27.png"/>
+<img src="image2020-1-3_17-7-27.png" class="border" style="width: 600px;"/>
 
 Note that the contained data is still identified as a "v2 trap", it is unchanged.
-
-
 
 
 # Related articles
@@ -48,7 +49,7 @@ Note that the contained data is still identified as a "v2 trap", it is unchanged
 {% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
 {% for article in articles %}
 {% assign tags = article.tags | split: " " %}
-{% if tags contains "kbsnmp" %}
+{% if tags contains "snmp" %}
 {% assign list = list | push: article %}
 {% endif %}
 {% endfor %}

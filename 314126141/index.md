@@ -30,9 +30,8 @@ toc: true
 version: 4
 ---
 
-# Example negotiation from a Fortigate
-<ac:structured-macro ac:name="jira" ac:schema-version="1" ac:macro-id="d8717671-3aa6-4368-8806-8556b282b593"><ac:parameter ac:name="server">Clavister JIRA</ac:parameter><ac:parameter ac:name="columns">key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution</ac:parameter><ac:parameter ac:name="serverId">3aa38841-2d2f-3a6e-862d-31e643fb0cf1</ac:parameter><ac:parameter ac:name="key">TIC-29771</ac:parameter></ac:structured-macro>
 
+# Example negotiation from a Fortigate
 Example: Fortigate is configured with 6 networks as its local traffic selector.
 
 User (perhaps reasonably) expects this to result in a VPN tunnel allowing 6 networks.
@@ -81,20 +80,15 @@ Fortigate however attempts to negotiate all 6 selectors in one SA.
         IP protocol  : 0
         Port range   : 0-0
         Address range: 10.0.2.0-10.0.2.255
-            </pre></td></tr></tbody></table># Problem: the behavior is undefined according to RFC
+            </pre></td></tr></tbody></table>
+# Problem: the behavior is undefined according to RFC
 <a href="https://tools.ietf.org/html/rfc5996">https://tools.ietf.org/html/rfc5996</a> talks about multiple traffic selectors using 2 examples:
 
 As a way of handling units being reconfigured / moved:
 
-<blockquote>"This could happen when the configurations of the two endpoints are being updated but only one end has received the new information."
+<blockquote>"This could happen when the configurations of the two endpoints are being updated but only one end has received the new information."</blockquote>When the initiator does not know the granularity of the responder, i.e. per port/proto or net:
 
-</blockquote>When the initiator does not know the granularity of the responder, i.e. per port/proto or net:
-
-<blockquote>"In the example, the initiator would include in TSi two Traffic Selectors: the first containing the address range (198.51.100.43 - 198.51.100.43) and the source port and IP protocol from the packet and the second containing (198.51.100.0 - 198.51.100.255) with all ports and IP protocols.
-
-</blockquote>So, the Clavister IPsec implementation picks the selector that it "prefers" from the provided list. In the example above, all networks are equally wide = there is no real preference.
-
-
+<blockquote>"In the example, the initiator would include in TSi two Traffic Selectors: the first containing the address range (198.51.100.43 - 198.51.100.43) and the source port and IP protocol from the packet and the second containing (198.51.100.0 - 198.51.100.255) with all ports and IP protocols.</blockquote>So, the Clavister IPsec implementation picks the selector that it "prefers" from the provided list. In the example above, all networks are equally wide = there is no real preference.
 
 
 # Related articles
@@ -102,7 +96,7 @@ As a way of handling units being reconfigured / moved:
 {% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
 {% for article in articles %}
 {% assign tags = article.tags | split: " " %}
-{% if tags contains "kbipsec" or tags contains "kbikev2" %}
+{% if tags contains "ipsec" or tags contains "ikev2" %}
 {% assign list = list | push: article %}
 {% endif %}
 {% endfor %}

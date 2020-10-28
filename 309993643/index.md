@@ -32,15 +32,17 @@ If it is established that the source of the packets is ESXi and there are no oth
 
 It is however completely safe to disable "Notify Switches" on vhost interfaces used for HA sync - they will do broadcasts of their own very often and do not need help with notifying switches.
 
+
 # Further reading
 <a href="https://www.google.com/search?q=esxi+%22notify+switches%22+setting+%22nic+teaming%22+rarp">Google: esxi "notify switches" setting "nic teaming" rarp</a>
+
 
 # Related articles
 {% assign list = "" | split:"" %}
 {% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.slug != page.slug" %}
 {% for article in articles %}
 {% assign tags = article.tags | split: " " %}
-{% if tags contains "kbvmware" or tags contains "kbha" %}
+{% if tags contains "vmware" or tags contains "ha" %}
 {% assign list = list | push: article %}
 {% endif %}
 {% endfor %}
