@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<h1 class="title mb-0">Tagged articles: {{page.title}}</h1>
+<p>This page shows all articles tagged with <b>{{page.title}}</b>.</p>
+
+{% assign articles = site.pages | where: "layout", "article" | where_exp: "item", "item.tags contains page.title" | sort: "title" %}
+{% for article in articles %}
+<div class="mb-4"><a href="{{article.url}}">{{article.title}}</a><br /><small class="text-muted"><b>{{ article.last_modified_at | date: "%e %b, %Y"}}</b></small> <small>{{article.tags}}</small></div>
+{% endfor %}

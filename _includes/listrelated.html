@@ -1,6 +1,6 @@
 {% if include.articles and include.articles.size > 0 %}
 {% for article in include.articles %}
-* [{{article.title}}]({{article.url}})  <small>{{article.tags}}</small>
+<div class="mb-4"><a href="{{article.url}}">{{article.title}}</a><br /><small class="text-muted"><b>{{ article.last_modified_at | date: "%e %b, %Y"}}</b></small> <small>{{article.tags}}</small></div>
 {% endfor %}
 {% else %}
 No related articles found.

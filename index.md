@@ -39,7 +39,7 @@
                         {% assign counter = counter | plus: 1 %}
                     {% endif %}
                 {% endfor %}
-                <span class="px-2"><a href="/tag/{{t}}" style="font-size: {{counter | times: 4 | plus: 80}}%;">{{t}}</a></span>
+                <span class="px-2"><a href="/tags/{{t}}" style="font-size: {{counter | times: 4 | plus: 80}}%;">{{t}}</a></span>
             {% endfor %}
             </div>
         </div>
