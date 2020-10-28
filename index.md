@@ -15,7 +15,7 @@
     <div>
         <h2>Latest Articles</h2>
 {% assign articles = site.pages | where: "layout", "article" | sort: "last_modified_at" | reverse %}
-{% for article in articles limit: 5 %}
+{% for article in articles limit: 10 %}
 <div class="mb-3 pb-1 border-bottom"><a href="{{article.url}}">{{article.title}}</a><br /><small class="text-muted"><b>{{ article.last_modified_at | date: "%e %b, %Y"}}</b></small> <small>{{article.tags}}</small></div>
 {% endfor %}
     </div>

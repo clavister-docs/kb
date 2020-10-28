@@ -1,17 +1,17 @@
 ---
 layout: default
 ---
-<h1>{{page.title}}</h1>
-
-<div class="d-flex justify-content-between">
-    <div>
+<h1 class="title mb-0">{{page.title}}</h1>
+<small class="d-block text-muted">Last modified on {{ page.last_modified_at | date: "%e %b, %Y"}}</small>
+<div class="d-flex justify-content-between mt-3">
+    <div class="pr-2">
         {{page.excerpt}}
         {% if page.toc %}
-            <p>{% include toc.html html=content class="toc" %}</p>
+            <div class="mt-4">{% include toc.html html=content class="toc" %}</div>
         {% endif %}    
     </div>
     {% if page.properties and page.properties.size > 0 %}
-    <div style="margin-left: 20px;">
+    <div class="w-50 pl-2"style="margin-left: 20px;">
         <table>
             {% for property in page.properties %}
                 <tr class="align-top">

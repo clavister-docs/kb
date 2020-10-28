@@ -5,12 +5,11 @@
 //
 
 // Breakpoints
-$large-breakpoint: 75rem;
+$large-breakpoint: 87.5rem;
 $medium-breakpoint: 48rem;
 
 $spacer: 1rem !default;
 $spacers: () !default;
-// stylelint-disable-next-line scss/dollar-variable-default
 $spacers: map-merge(
   (
     0: 0,
@@ -123,17 +122,21 @@ $status-colors: (
 .align-self-stretch  { align-self: stretch !important; }
 
 // floats
-.float-left {
-    float: left !important;
-}
+.float-left { float: left !important; }
+.float-right { float: right !important; }
+.float-none { float: none !important; }
 
-.float-right {
-    float: right !important;
-}
+// displays
+.d-none { display: none !important; }
+.d-block {display: block !important; }
+.d-inline-block {display: inline-block; }
+.d-inline { display: inline; }
 
-.float-none {
-    float: none !important;
-}
+// widths
+.w-25 { width: 25% !important; }
+.w-50 { width: 50% !important; }
+.w-75 { width: 75% !important; }
+.w-100 { width: 100% !important; }
 
 // margin and padding utils
 @each $prop, $abbrev in (margin: m, padding: p) {
@@ -165,33 +168,25 @@ $status-colors: (
 .border-bottom  { border-bottom: 1px solid $border-color !important; }
 .border-left    { border-left: 1px solid $border-color !important; }
 
+// shadow
+.shadow { box-shadow: 0 .125rem .25rem rgba($black, .075) !important; }
 
-.text-muted {
-    color: $text-muted-color !important;
-}
 
-.text-nowrap { 
-    white-space: nowrap !important; 
-}
+.text-muted { color: $text-muted-color !important; }
+.text-nowrap { white-space: nowrap !important; }
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
 
-.text-left { 
-    text-align: left !important; 
-}
+.align-top { vertical-align: top !important; }
 
-.text-right { 
-    text-align: right !important; 
-}
-
-.align-top { 
-    vertical-align: top !important;
- }
+ h1.title { font-weight: bold; }
 
 .panel {
     position: relative;
     float: right;
     width: 350px;
     background-color: $gray-200;
-    padding: 10px;
+    padding: .75rem;
 }
 
 .tag {
@@ -234,6 +229,20 @@ $status-colors: (
         }
     }
 }
+
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    //border-radius: .25rem;
+  }
+
+  .alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+  }
 
 // site-specific ui elements below
 
@@ -302,11 +311,16 @@ $status-colors: (
         max-width: $large-breakpoint;
     }
 
+    @include medium{
+        padding: 1rem 2rem;
+    }
+
     :first-child {
         margin-top: unset;
     }
 
     h1, h2, h3, h4, h5, h6 {
+        margin-top: 1.5rem;
         margin-bottom: 0.5rem;
     }
 }
