@@ -247,8 +247,9 @@ $status-colors: (
 // site-specific ui elements below
 
 .page-header {
-    background: $header-bg-color-secondary url(/assets/img/header-bg.jpg) no-repeat;
-    background-size: cover;
+    //background: $header-bg-color-secondary url(/assets/img/header-bg.jpg) no-repeat;
+    //background-size: cover;
+    background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
     box-shadow: 0 1px 5px 3px $gray-400;
 
     @include large {
@@ -271,18 +272,20 @@ $status-colors: (
 
         @include large {
             max-width: $large-breakpoint;
-            padding: 1rem 6rem;
+            padding: 0rem 6rem;
             margin: 0 auto;
         }
         
           @include medium {
-            padding: 1rem 0rem;
+            padding: 0rem 0rem;
         }
         
           @include small {
             padding: 0;
         }
     }
+
+    a { color: $white; }
 
     a.site-brand {
 
@@ -325,90 +328,86 @@ $status-colors: (
     }
 }
 
-.main-search {
-    margin-bottom: 30px;
+.search-control {
+    position:relative;
+    display: flex;
+    min-width: 100px;
 
-    .search-control {
-        position:relative;
-        display: flex;
-        min-width: 100px;
-
-        > input[type="text"] {
-            width: 100%;
-            padding: 10px 5px 10px 40px;
-            border-radius: 0.3rem;
-            border:1px solid $gray-500;
-
-            &:hover, &:active, &:focus {
-                border-color: $body-link-color;
-                outline: none;
-
-                ~ .search-btn .search-icon .search-path {
-                    stroke: $body-link-color;
-                }
-            }
-        }
+    > input[type="text"] {
+        width: 100%;
+        padding: 10px 5px 10px 40px;
+        border-radius: 0.3rem;
+        border:1px solid $gray-500;
 
         &:hover, &:active, &:focus {
-            > input[type="text"] {
-                border-color: $body-link-color;
-                outline: none;
-            }
+            border-color: $body-link-color;
+            outline: none;
 
-            .search-btn .search-icon .search-path {
+            ~ .search-btn .search-icon .search-path {
                 stroke: $body-link-color;
-            }
-        }
-
-        > .search-btn {
-            position: absolute;
-            left: 5px;
-            top: calc((100% - 20px) / 2);
-            border: 0;
-            background:none;
-
-            &:hover, &:active, &:focus {
-                border: 0;
-                outline: none;
-            }
-
-            .search-icon {
-                width: 20px;
-                height: 20px;
-                
-                .search-path {
-                    stroke-width: 2px;
-                    stroke: $gray-500;
-                }
-            }
-        }
-
-        > .clear-btn {
-            position: absolute;
-            display: none;
-            top: calc((100% - 1.6em) / 2);
-            right: 8px;
-            font-weight: bold;
-            font-size: 1.6em;
-            cursor: pointer;
-
-            &:hover {
-                color: $body-link-color;
             }
         }
     }
 
-    .search-results {
-        > div {
-            padding: 1rem;
-            display: flex;
-            flex-direction: column;
-            align-items: start;
-            border-bottom: 1px solid $gray-200;
+    &:hover, &:active, &:focus {
+        > input[type="text"] {
+            border-color: $body-link-color;
+            outline: none;
+        }
 
-            > p {
-                margin: 5px 0;
+        .search-btn .search-icon .search-path {
+            stroke: $body-link-color;
+        }
+    }
+
+    > .search-btn {
+        position: absolute;
+        left: 5px;
+        top: calc((100% - 20px) / 2);
+        border: 0;
+        background:none;
+
+        &:hover, &:active, &:focus {
+            border: 0;
+            outline: none;
+        }
+
+        .search-icon {
+            width: 20px;
+            height: 20px;
+            
+            .search-path {
+                stroke-width: 2px;
+                stroke: $gray-500;
             }
+        }
+    }
+
+    > .clear-btn {
+        position: absolute;
+        display: none;
+        top: calc((100% - 1.6em) / 2);
+        right: 8px;
+        font-weight: bold;
+        font-size: 1.6em;
+        cursor: pointer;
+
+        &:hover {
+            color: $body-link-color;
+        }
+    }
+}
+
+.search-results {
+    > div {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        border-bottom: 1px solid $gray-200;
+
+        > p {
+            margin: 5px 0;
         }
     }
 }

@@ -1,6 +1,6 @@
 <h1>Welcome to Clavister Knowledge Base</h1>
 
-<div id="search-container" class="main-search" markdown="0">
+<div id="search-container" class="mb-4" markdown="0">
     <div class="search-control">
         <input type="text" id="search-input" placeholder="Search the Knowledge Base...">
         <button class="search-btn">
