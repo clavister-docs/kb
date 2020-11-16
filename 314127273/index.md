@@ -22,7 +22,7 @@ published: 'true'
 redirect_from:
 - /314127273/
 slug: '314127273'
-tags: core ipreputation lacklist threatprevention
+tags: core ipreputation blacklist threatprevention
 title: Can blacklist timeouts (TTL,lifetime) for "Scanner Protection" or "Botnet Blocking"
   be changed or increased?
 toc: false
