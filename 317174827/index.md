@@ -27,8 +27,10 @@ version: 6
 # Modify log4j2.xml
 All we really need to do is to modify the log4j2.xml file found in /opt/EasyAccess/Server/config or C:/program files/EasyAccess/Server/config:
 
-<ac:structured-macro><ac:parameter>RDark</ac:parameter><ac:parameter>log4j2.xml</ac:parameter><ac:plain-text-body>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;!--
+**log4j2.xml**
+```java
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
   ~ Copyright (c) 2015 PhenixID AB (http://phenixid.net) - All Rights Reserved
   ~
   ~  Proprietary and confidential
@@ -36,53 +38,57 @@ All we really need to do is to modify the log4j2.xml file found in /opt/EasyAcc
   ~  Unauthorized copying and distribution of this file (via any medium) is strictly prohibited
   ~
   ~  For more information please contact: info@phenixid.se
-  --&gt;
+  -->
 
-&lt;Configuration monitorInterval="30"&gt;
-    &lt;Appenders&gt;
-        &lt;Console name="CONSOLE" target="SYSTEM_OUT"&gt;
-            &lt;PatternLayout pattern="%d [%c{1}]  %p: %m%n"/&gt;
-        &lt;/Console&gt;
-        &lt;RollingFile
+<Configuration monitorInterval="30">
+    <Appenders>
+        <Console name="CONSOLE" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d [%c{1}]  %p: %m%n"/>
+        </Console>
+        <RollingFile
                 name="FILE"
                 fileName="logs/server.log"
                 filePattern="logs/server.%date{yyyy-MM-dd}.log"
-                append="true"&gt;
-            &lt;PatternLayout pattern="%d [%c{1}]  %p: %m%n"/&gt;
-            &lt;Policies&gt;
-                &lt;TimeBasedTriggeringPolicy interval="1"/&gt;
-            &lt;/Policies&gt;
-        &lt;/RollingFile&gt;
-        &lt;RollingFile
+                append="true">
+            <PatternLayout pattern="%d [%c{1}]  %p: %m%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile
                 name="EVENT"
                 fileName="logs/event.log"
                 filePattern="logs/event.%date{yyyy-MM-dd}.log"
-                append="true"&gt;
-            &lt;PatternLayout pattern="%d [%c{1}]  %p: %m%n"/&gt;
-            &lt;Policies&gt;
-                &lt;TimeBasedTriggeringPolicy interval="1"/&gt;
-            &lt;/Policies&gt;
-        &lt;/RollingFile&gt;
-    &lt;/Appenders&gt;
-    &lt;Loggers&gt;
-        &lt;AsyncLogger name="com.phenixidentity" level="DEBUG"/&gt;
-        &lt;AsyncLogger name="io.netty" level="WARN"/&gt;
-        &lt;AsyncLogger name="com.hazelcast" level="WARN"/&gt;
-        &lt;AsyncLogger name="org.vertx" level="WARN"/&gt;
-        &lt;AsyncLogger name="com.orientechnologies" level="WARN"/&gt;
-        &lt;Logger name="EVENT" level="INFO" additivity="false"&gt;
-            &lt;AppenderRef ref="EVENT"/&gt;
-        &lt;/Logger&gt;
-        &lt;Root level="WARN"&gt;
-            &lt;AppenderRef ref="FILE"/&gt;
-        &lt;/Root&gt;
-    &lt;/Loggers&gt;
-&lt;/Configuration&gt;
+                append="true">
+            <PatternLayout pattern="%d [%c{1}]  %p: %m%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+            </Policies>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <AsyncLogger name="com.phenixidentity" level="DEBUG"/>
+        <AsyncLogger name="io.netty" level="WARN"/>
+        <AsyncLogger name="com.hazelcast" level="WARN"/>
+        <AsyncLogger name="org.vertx" level="WARN"/>
+        <AsyncLogger name="com.orientechnologies" level="WARN"/>
+        <Logger name="EVENT" level="INFO" additivity="false">
+            <AppenderRef ref="EVENT"/>
+        </Logger>
+        <Root level="WARN">
+            <AppenderRef ref="FILE"/>
+        </Root>
+    </Loggers>
+</Configuration>
 
-</ac:plain-text-body></ac:structured-macro>Change to:
 
-<ac:structured-macro><ac:parameter>RDark</ac:parameter><ac:parameter>log4j2.xml</ac:parameter><ac:plain-text-body>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;!--
+```
+Change to:
+
+**log4j2.xml**
+```java
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
   ~ Copyright (c) 2015 PhenixID AB (http://phenixid.net) - All Rights Reserved
   ~
   ~  Proprietary and confidential
@@ -90,63 +96,67 @@ All we really need to do is to modify the log4j2.xml file found in /opt/EasyAcc
   ~  Unauthorized copying and distribution of this file (via any medium) is strictly prohibited
   ~
   ~  For more information please contact: info@phenixid.se
-  --&gt;
+  -->
 
-&lt;Configuration monitorInterval="30"&gt;
-    &lt;Appenders&gt;
-        &lt;Console name="CONSOLE" target="SYSTEM_OUT"&gt;
-            &lt;PatternLayout pattern="%d [%c{1}]  %p: %m%n"/&gt;
-        &lt;/Console&gt;
-        &lt;RollingFile
+<Configuration monitorInterval="30">
+    <Appenders>
+        <Console name="CONSOLE" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d [%c{1}]  %p: %m%n"/>
+        </Console>
+        <RollingFile
                 name="FILE"
                 fileName="logs/server.log"
                 filePattern="logs/server.%date{yyyy-MM-dd}.log"
-                append="true"&gt;
-            &lt;PatternLayout pattern="%d [%c{1}]  %p: %m%n"/&gt;
-            &lt;Policies&gt;
-                &lt;TimeBasedTriggeringPolicy interval="1"/&gt;
-            &lt;/Policies&gt;
-        &lt;/RollingFile&gt;
-        &lt;RollingFile
+                append="true">
+            <PatternLayout pattern="%d [%c{1}]  %p: %m%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile
                 name="EVENT"
                 fileName="logs/event.log"
                 filePattern="logs/event.%date{yyyy-MM-dd}.log"
-                append="true"&gt;
-            &lt;PatternLayout pattern="%d [%c{1}]  %p: %m%n"/&gt;
-            &lt;Policies&gt;
-                &lt;TimeBasedTriggeringPolicy interval="1"/&gt;
-            &lt;/Policies&gt;
-        &lt;/RollingFile&gt;
-        &lt;Syslog
+                append="true">
+            <PatternLayout pattern="%d [%c{1}]  %p: %m%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+            </Policies>
+        </RollingFile>
+        <Syslog
     		name="CEF"
     		host="1.1.1.1" 
     		port="514"
-    		protocol="UDP"&gt;
+    		protocol="UDP">
             facility="LOCAL7"
-        &lt;/Syslog&gt;
-    &lt;/Appenders&gt;
-    &lt;Loggers&gt;
-        &lt;AsyncLogger name="com.phenixidentity" level="DEBUG"/&gt;
-        &lt;AsyncLogger name="io.netty" level="WARN"/&gt;
-        &lt;AsyncLogger name="com.hazelcast" level="WARN"/&gt;
-        &lt;AsyncLogger name="org.vertx" level="WARN"/&gt;
-        &lt;AsyncLogger name="com.orientechnologies" level="WARN"/&gt;
-        &lt;Logger name="EVENT" level="INFO" additivity="false"&gt;
-            &lt;AppenderRef ref="EVENT"/&gt;
-            &lt;AppenderRef ref="CEF"/&gt;
-        &lt;/Logger&gt;
-        &lt;Root level="WARN"&gt;
-            &lt;AppenderRef ref="FILE"/&gt;
-        &lt;/Root&gt;
-    &lt;/Loggers&gt;
-&lt;/Configuration&gt;
+        </Syslog>
+    </Appenders>
+    <Loggers>
+        <AsyncLogger name="com.phenixidentity" level="DEBUG"/>
+        <AsyncLogger name="io.netty" level="WARN"/>
+        <AsyncLogger name="com.hazelcast" level="WARN"/>
+        <AsyncLogger name="org.vertx" level="WARN"/>
+        <AsyncLogger name="com.orientechnologies" level="WARN"/>
+        <Logger name="EVENT" level="INFO" additivity="false">
+            <AppenderRef ref="EVENT"/>
+            <AppenderRef ref="CEF"/>
+        </Logger>
+        <Root level="WARN">
+            <AppenderRef ref="FILE"/>
+        </Root>
+    </Loggers>
+</Configuration>
 
-</ac:plain-text-body></ac:structured-macro>
+
+```
+
 # Send logs to InCenter
 For InCenter there are some more stuff that we need to change as well, first modify log4j2.xml to look like this:
 
-<ac:structured-macro><ac:parameter>RDark</ac:parameter><ac:parameter>log4j2.xml</ac:parameter><ac:plain-text-body>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;!--
+**log4j2.xml**
+```java
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
   ~ Copyright (c) 2015 PhenixID AB (http://phenixid.net) - All Rights Reserved
   ~
   ~  Proprietary and confidential
@@ -154,60 +164,62 @@ For InCenter there are some more stuff that we need to change as well, first mod
   ~  Unauthorized copying and distribution of this file (via any medium) is strictly prohibited
   ~
   ~  For more information please contact: info@phenixid.se
-  --&gt;
+  -->
 
-&lt;Configuration monitorInterval="30"&gt;
-    &lt;Appenders&gt;
-        &lt;Console name="CONSOLE" target="SYSTEM_OUT"&gt;
-            &lt;PatternLayout pattern="%d [%c{1}]  %p: %m%n"/&gt;
-        &lt;/Console&gt;
-        &lt;RollingFile
+<Configuration monitorInterval="30">
+    <Appenders>
+        <Console name="CONSOLE" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d [%c{1}]  %p: %m%n"/>
+        </Console>
+        <RollingFile
                 name="FILE"
                 fileName="logs/server.log"
                 filePattern="logs/server.%date{yyyy-MM-dd}.log"
-                append="true"&gt;
-            &lt;PatternLayout pattern="%d [%c{1}]  %p: %m%n"/&gt;
-            &lt;Policies&gt;
-                &lt;TimeBasedTriggeringPolicy interval="1"/&gt;
-            &lt;/Policies&gt;
-        &lt;/RollingFile&gt;
-        &lt;RollingFile
+                append="true">
+            <PatternLayout pattern="%d [%c{1}]  %p: %m%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile
                 name="EVENT"
                 fileName="logs/event.log"
                 filePattern="logs/event.%date{yyyy-MM-dd}.log"
-                append="true"&gt;
-            &lt;PatternLayout pattern="%d [%c{1}]  %p: %m%n"/&gt;
-            &lt;Policies&gt;
-                &lt;TimeBasedTriggeringPolicy interval="1"/&gt;
-            &lt;/Policies&gt;
-        &lt;/RollingFile&gt;
-        &lt;Syslog
+                append="true">
+            <PatternLayout pattern="%d [%c{1}]  %p: %m%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+            </Policies>
+        </RollingFile>
+        <Syslog
     		name="CEF"
     		host="1.1.1.1" 
     		port="514"
-    		protocol="UDP"&gt;
-		&lt;PatternLayout&gt;
-        	&lt;Pattern&gt;%m%n&lt;/Pattern&gt;
-        &lt;/PatternLayout&gt;
-        &lt;/Syslog&gt;
-    &lt;/Appenders&gt;
-    &lt;Loggers&gt;
-        &lt;AsyncLogger name="com.phenixidentity" level="DEBUG"/&gt;
-        &lt;AsyncLogger name="io.netty" level="WARN"/&gt;
-        &lt;AsyncLogger name="com.hazelcast" level="WARN"/&gt;
-        &lt;AsyncLogger name="org.vertx" level="WARN"/&gt;
-        &lt;AsyncLogger name="com.orientechnologies" level="WARN"/&gt;
-        &lt;Logger name="EVENT" level="INFO" additivity="false"&gt;
-            &lt;AppenderRef ref="EVENT"/&gt;
-            &lt;AppenderRef ref="CEF"/&gt;
-        &lt;/Logger&gt;
-        &lt;Root level="WARN"&gt;
-            &lt;AppenderRef ref="FILE"/&gt;
-        &lt;/Root&gt;
-    &lt;/Loggers&gt;
-&lt;/Configuration&gt;
+    		protocol="UDP">
+		<PatternLayout>
+        	<Pattern>%m%n</Pattern>
+        </PatternLayout>
+        </Syslog>
+    </Appenders>
+    <Loggers>
+        <AsyncLogger name="com.phenixidentity" level="DEBUG"/>
+        <AsyncLogger name="io.netty" level="WARN"/>
+        <AsyncLogger name="com.hazelcast" level="WARN"/>
+        <AsyncLogger name="org.vertx" level="WARN"/>
+        <AsyncLogger name="com.orientechnologies" level="WARN"/>
+        <Logger name="EVENT" level="INFO" additivity="false">
+            <AppenderRef ref="EVENT"/>
+            <AppenderRef ref="CEF"/>
+        </Logger>
+        <Root level="WARN">
+            <AppenderRef ref="FILE"/>
+        </Root>
+    </Loggers>
+</Configuration>
 
-</ac:plain-text-body></ac:structured-macro>Next we need to modify add the following line to /opt/EasyAccess/Server/binstart-PhenixID.sh  or  C:/program files/EasyAccess/Server/bin/EasyAccess vmotion file:
+
+```
+Next we need to modify add the following line to /opt/EasyAccess/Server/binstart-PhenixID.sh  or  C:/program files/EasyAccess/Server/bin/EasyAccess vmotion file:
 
 <table class="wrapped"><colgroup><col/></colgroup><tbody><tr><td><code class="cpp plain">JAVA_OPTS=</code><code class="cpp string">"${JAVA_OPTS} -Dcom.phenixidentity.globals.datetimepattern=yyyy-MM-dd'T'HH:mm:ssXXX"</code></td></tr></tbody></table>This will require a reboot to take affect.
 
